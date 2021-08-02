@@ -5,7 +5,8 @@
   Time: 17:44
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%@taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <html>
     <head>
         <title>Login</title>
@@ -19,12 +20,13 @@
 
                 <!-- Login Form -->
                 <form action="ServletLogin" method="post">
-                    <input type="text" id="login" class="fadeIn second" name="user" placeholder="login">
-                    <input type="text" id="password" class="fadeIn third" name="pass" placeholder="password">
-                    <input type="submit" class="fadeIn fourth" value="Log In">
-                </form>
+                    <label for="login"><input type="text" id="login" class="fadeIn second" name="user" placeholder="Ingresa tu usuario"></label>
+                    <label for="pass"><input type="password" id="pass" class="fadeIn third" name="pass" placeholder="Ingresa tu contraseña"></label>
+                    <input type="hidden" value="inicioSesion" name="accion">
+                    <input type="submit" class="fadeIn fourth" value="LogIn">
+                    </form>
                 <h2>${mensaje}</h2>
-                <!-- Remind Passowrd -->
+                <!-- Remind Password -->
                 <div id="formFooter">
                     <a class="underlineHover" href="registro.jsp">Registrate</a>
                 </div>

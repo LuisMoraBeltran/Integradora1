@@ -115,15 +115,16 @@ public class DaoUsuario {
     }
 
     //Metodo para login usuario
-    public boolean loginUsuario(Usuario user) {
-        boolean status = false;
+    public Usuario loginUsuario(Usuario user) {
+
         try (Connection con = ConexionMYSQL.getConnection();
                 PreparedStatement stm = con.prepareStatement("SELECT * FROM usuarios WHERE user=? AND pass=?");) {
             stm.setString(1, user.getUser());
             stm.setString(2, user.getPass());
             try (ResultSet rs = stm.executeQuery();) {
                 while (rs.next()) {
-                    status = true;
+                    user.setId(rs.getInt("idusuarios"));
+                    return user;
                 }
             } catch (Exception e) {
                 logger.error(e.getMessage());
@@ -131,8 +132,7 @@ public class DaoUsuario {
         } catch (Exception e) {
             logger.error(e.getMessage());
         }
-
-        return status;
+        return null;
     }
 
     //Metodo para validar usuario
