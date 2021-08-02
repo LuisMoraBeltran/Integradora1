@@ -1929,6 +1929,7 @@ progress {
     }
 }
 .table {
+
     --bs-table-bg: transparent;
     --bs-table-accent-bg: transparent;
     --bs-table-striped-color: #212529;
