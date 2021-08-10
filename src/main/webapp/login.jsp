@@ -30,6 +30,9 @@
                 <div id="formFooter">
                     <a class="underlineHover" href="registro.jsp">Registrate</a>
                 </div>
+                <div id="formFooter">
+                    <a class="underlineHover" href="pantallaInicio.jsp">Iniciar sin Usuario</a>
+                </div>
 
             </div>
         </div>

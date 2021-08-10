@@ -1,6 +1,5 @@
 /*margin: arriba,derecha,abajo,izquierda*/
 #head{
-
     color:white;
     background-color: #111F6A;
     width: 100%;
@@ -10,10 +9,12 @@
 #bnt{
     background-color:#162889;
 }
+.body{
+    background-color: #0c4128;
+}
 #carr{
     width: 90%;
 }
-
 #img{
     float:left;
     width:15%;
