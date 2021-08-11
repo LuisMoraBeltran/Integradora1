@@ -5,22 +5,24 @@
   Time: 04:17 p. m.
   To change this template use File | Settings | File Templates.
 --%>
+<%@taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
 <html>
 <head>
     <title></title>
-    <%@taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Fashion.com</title>
-    <link rel="stylesheet" href="static/css/fondo.css">
+    <link rel="stylesheet" type="text/css" href="static/css/fondo.css">
+    <link rel="stylesheet" href="static/css/bootstrap.css">
     <link rel="stylesheet" href="static/css/normalize.css">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="static/css/magic.css">
     <link rel="stylesheet" href="static/css/bootstrap-grid.css">
     <link rel="stylesheet" href="static/css/bootstrap.rtl.css">
 </head>
-<body>
+<body bgcolor="#000">
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -35,9 +37,9 @@
             <img src="imagen/c2.jpg" class="d-block w-100" height="300">
         </div>
         <div class="carousel-item">
-            <img src="imagen/c3.jpg" class="d-block w-100" height="300">
+            <img src="..." class="d-block w-100" height="300">
         </div>
-    </div>
+    </div></div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
@@ -74,11 +76,11 @@
         <a class="nav-link" href="#">Iniciar seción</a>
     </li>
 </ul>
-<div class="float-right" id="promo">lorem</div>
 
+<div  id="promo">lorem</div>
 
-
-    <div class="col-sm-8">
+<div class="row">
+    <div class="col-sm-4">
     <div class="card" style="width: 18rem;">
         <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
@@ -86,7 +88,7 @@
             <p class="card-text"> descripcion </p>
             <a href="#" class="btn btn-primary">Comprar</a>
         </div></div></div>
-<div class="col-sm-8">
+<div class="col-sm-4">
     <div class="card" style="width: 18rem;">
         <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
@@ -94,7 +96,7 @@
             <p class="card-text"> descripcion </p>
             <a href="#" class="btn btn-primary">Comprar</a>
         </div></div></div>
-<div class="col-sm-8">
+<div class="col-sm-4">
     <div class="card" style="width: 18rem;">
         <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
@@ -102,7 +104,7 @@
             <p class="card-text"> descripcion </p>
             <a href="#" class="btn btn-primary">Comprar</a>
         </div></div></div>
-<div class="col-sm-8">
+<div class="col-sm-4">
     <div class="card" style="width: 18rem;">
         <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
@@ -110,7 +112,7 @@
             <p class="card-text"> descripcion </p>
             <a href="#" class="btn btn-primary">Comprar</a>
         </div></div></div>
-<div class="col-sm-8">
+<div class="col-sm-4">
     <div class="card" style="width: 18rem;">
         <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
@@ -118,6 +120,7 @@
             <p class="card-text"> descripcion </p>
             <a href="#" class="btn btn-primary">Comprar</a>
         </div></div></div>
+</div>
 
 
 
@@ -127,7 +130,9 @@
 <section id="pie">
     <p class="text-center">Condiciones de uso | Aviso de privacidad | © 1996-2021, Fashin.com, Inc. o afiliados. Todos los derechos reservados.</p>
 </section>
-<script src="static/css/bootstrap.css"></script>
+
 <script src="static/js/bootstrap.js"></script>
+
+
 </body>
 </html>

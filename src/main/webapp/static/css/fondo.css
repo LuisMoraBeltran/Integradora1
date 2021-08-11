@@ -1,6 +1,6 @@
 /*margin: arriba,derecha,abajo,izquierda*/
-.body{
-    color:white;
+body{
+    color:#6a1a21;
     background-color: #6a1a21;
 
 }
@@ -12,9 +12,11 @@
 }
 #promo{
     background-color: #0dcaf0;
+    font-size: 100px;
     width: 20%;
     height: auto;
     float: right;
+
 }
 #normales{
     width: 80%;
