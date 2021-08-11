@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="static/css/bootstrap-grid.css">
     <link rel="stylesheet" href="static/css/bootstrap.rtl.css">
 </head>
-<body bgcolor="#000">
+<body >
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -49,10 +49,10 @@
         <span class="visually-hidden">Next</span>
     </button>
 </div>
-
+<br>
 <ul class="nav">
     <li class="nav-item">
-        <a class="nav-link active" href="#">Inicio</a>
+        <a class="nav-link active" href="menuPrincipal.jsp">Inicio</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="#">Tendencias</a>
@@ -73,7 +73,10 @@
         <a class="nav-link" href="#">Verano</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">Iniciar seción</a>
+        <a class="nav-link" href="login.jsp">Iniciar seción</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="login.jsp">Carrito</a>
     </li>
 </ul>
 
@@ -87,6 +90,7 @@
             <h5 class="card-title">titulo</h5>
             <p class="card-text"> descripcion </p>
             <a href="#" class="btn btn-primary">Comprar</a>
+            <a href="#" class="btn btn-primary">Añadir al carrito</a>
         </div></div></div>
 <div class="col-sm-4">
     <div class="card" style="width: 18rem;">
@@ -95,6 +99,7 @@
             <h5 class="card-title">titulo</h5>
             <p class="card-text"> descripcion </p>
             <a href="#" class="btn btn-primary">Comprar</a>
+            <a href="#" class="btn btn-primary">Añadir al carrito</a>
         </div></div></div>
 <div class="col-sm-4">
     <div class="card" style="width: 18rem;">
@@ -103,6 +108,7 @@
             <h5 class="card-title">titulo</h5>
             <p class="card-text"> descripcion </p>
             <a href="#" class="btn btn-primary">Comprar</a>
+            <a href="#" class="btn btn-primary">Añadir al carrito</a>
         </div></div></div>
 <div class="col-sm-4">
     <div class="card" style="width: 18rem;">
@@ -111,6 +117,7 @@
             <h5 class="card-title">titulo</h5>
             <p class="card-text"> descripcion </p>
             <a href="#" class="btn btn-primary">Comprar</a>
+            <a href="#" class="btn btn-primary">Añadir al carrito</a>
         </div></div></div>
 <div class="col-sm-4">
     <div class="card" style="width: 18rem;">
@@ -119,7 +126,44 @@
             <h5 class="card-title">titulo</h5>
             <p class="card-text"> descripcion </p>
             <a href="#" class="btn btn-primary">Comprar</a>
+            <a href="#" class="btn btn-primary">Añadir al carrito</a>
         </div></div></div>
+    <div class="col-sm-4">
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">titulo</h5>
+                <p class="card-text"> descripcion </p>
+                <a href="#" class="btn btn-primary">Comprar</a>
+                <a href="#" class="btn btn-primary">Añadir al carrito</a>
+            </div></div></div>
+    <div class="col-sm-4">
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">titulo</h5>
+                <p class="card-text"> descripcion </p>
+                <a href="#" class="btn btn-primary">Comprar</a>
+                <a href="#" class="btn btn-primary">Añadir al carrito</a>
+            </div></div></div>
+    <div class="col-sm-4">
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">titulo</h5>
+                <p class="card-text"> descripcion </p>
+                <a href="#" class="btn btn-primary">Comprar</a>
+                <a href="#" class="btn btn-primary">Añadir al carrito</a>
+            </div></div></div>
+    <div class="col-sm-4">
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">titulo</h5>
+                <p class="card-text"> descripcion </p>
+                <a href="#" class="btn btn-primary">Comprar</a>
+                <a href="#" class="btn btn-primary">Añadir al carrito</a>
+            </div></div></div>
 </div>
 
 

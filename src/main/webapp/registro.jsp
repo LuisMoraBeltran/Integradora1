@@ -8,11 +8,13 @@
     </head>
     <body>
 
-        <h1>Registrate</h1>
-        <h2>Ingresa datos para el registro</h2>
+
+
 
         <div class="wrapper fadeInDown">
             <div id="formContent1">
+                <h1><i>Inicio de secion</i></h1>
+                <h2>Ingresa datos para el registro</h2>
                 <form action="ServletUsuario" method="post">
                     <label for="Usuario">
                         <input type="text" id="usuario" class="fadeIn second" name="user" placeholder="usuario">
@@ -25,7 +27,7 @@
                 <h3>${mensaje}</h3>
             </div>
             <div id="formFooter">
-                <a class="underlineHover" href="menuPrincipal.jsp" title="Salir">Salir</a>
+                <a class="underlineHover" href="login.jsp" title="Salir">Salir</a>
             </div>
         </div>
         <script src="static/js/bootstrap.js"></script>

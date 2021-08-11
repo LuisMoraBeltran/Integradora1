@@ -18,7 +18,7 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   height: 100vh;
-  background-color: coral;
+  background-color:#636464;
 }
 
 a {
@@ -61,7 +61,7 @@ h2 {
 #formContent {
   -webkit-border-radius: 10px 10px 10px 10px;
   border-radius: 10px 10px 10px 10px;
-  background: #fff;
+  background: #00134d;
   padding: 30px;
   width: 90%;
   max-width: 450px;
@@ -74,7 +74,7 @@ h2 {
 #formContent1 {
   -webkit-border-radius: 10px 10px 10px 10px;
   border-radius: 10px 10px 10px 10px;
-  background: #00FEF6FF;
+  background: green;
   padding: 30px;
   width: 90%;
   max-width: 450px;
