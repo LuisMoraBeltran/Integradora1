@@ -5,22 +5,17 @@ and open the template in the editor.
 */
 /* 
     Created on : 18/07/2021, 10:30:30 AM
-    Author     : LuisB
-*/
-
-
+    Author     : LuisB*/
 /* BASIC */
-
 html {
-  background-color: #56baed;
+  /* Color de transicion entre pantalla principal y login  */
+  background-color: #a1d0e3;
 }
-
 body {
   font-family: "Poppins", sans-serif;
   height: 100vh;
-  background-color:#636464;
+  background-color: #bcbebe;
 }
-
 a {
   color: #92badd;
   display:inline-block;
@@ -31,10 +26,8 @@ h1{
   text-align: center;
   text-transform: uppercase;
   margin: 10px 8px 10px 8px;
-  color: #0d0d0d;
-
+  color: #ffffff;
 }
-
 h2 {
   text-align: center;
   font-size: 16px;
@@ -43,11 +36,7 @@ h2 {
   margin: 10px 8px 10px 8px;
   color: #ece6e7;
 }
-
-
-
 /* STRUCTURE */
-
 .wrapper {
   display: flex;
   align-items: center;
@@ -57,11 +46,10 @@ h2 {
   min-height: 100%;
   padding: 20px;
 }
-
 #formContent {
   -webkit-border-radius: 10px 10px 10px 10px;
   border-radius: 10px 10px 10px 10px;
-  background: #00134d;
+  background: #001050;
   padding: 30px;
   width: 90%;
   max-width: 450px;
@@ -74,7 +62,7 @@ h2 {
 #formContent1 {
   -webkit-border-radius: 10px 10px 10px 10px;
   border-radius: 10px 10px 10px 10px;
-  background: green;
+  background: #001050;
   padding: 30px;
   width: 90%;
   max-width: 450px;
@@ -86,12 +74,12 @@ h2 {
 }
 
 #formFooter {
-  background-color: #f6f6f6;
+  background-color: #8f8989;
   border-top: 1px solid #dce8f1;
   padding: 25px;
   text-align: center;
   -webkit-border-radius: 0 0 10px 10px;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 0 0;
 }
 #formFooter1 {
   background-color: #fd8b00;
@@ -99,7 +87,7 @@ h2 {
   padding: 25px;
   text-align: center;
   -webkit-border-radius: 0 0 10px 10px;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 0 0;
 }
 
 /* TABS */

@@ -22,65 +22,68 @@
     <link rel="stylesheet" href="static/css/bootstrap-grid.css">
     <link rel="stylesheet" href="static/css/bootstrap.rtl.css">
 </head>
-<body >
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+<body>
+<section id="fondo">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="..." class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="imagen/c1.jpg" class="d-block w-100" height="300px">
-        </div>
-        <div class="carousel-item">
-            <img src="imagen/c2.jpg" class="d-block w-100" height="300">
-        </div>
-        <div class="carousel-item">
-            <img src="..." class="d-block w-100" height="300">
-        </div>
-    </div></div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-</div>
-<br>
+    <div id="pie">
 <ul class="nav">
     <li class="nav-item">
-        <a class="nav-link active" href="menuPrincipal.jsp">Inicio</a>
+        <a class="nav-link active" href="pantallaInicio.jsp">Inicio</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">Tendencias</a>
+        <a class="nav-link" href="pantallaInicio.jsp">Tendencias</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">Ofertas</a>
+        <a class="nav-link" href="pantallaInicio.jsp">Ofertas</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">Primavera</a>
+        <a class="nav-link" href="pantallaInicio.jsp">Primavera</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">Otoño</a>
+        <a class="nav-link" href="pantallaInicio.jsp">Otoño</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">Invierno</a>
+        <a class="nav-link" href="pantallaInicio.jsp">Invierno</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">Verano</a>
+        <a class="nav-link" href="pantallaInicio.jsp">Verano</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="login.jsp">Iniciar seción</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="login.jsp">Carrito</a>
+        <a class="nav-link disabled" href="login.jsp" tabindex="-1" aria-disabled="true" >Carrito</a>
     </li>
-</ul>
 
-<div  id="promo">lorem</div>
+</ul>
+    </div>
+<div  id="promo">lorem
+</div>
 
 <div class="row">
     <div class="col-sm-4">
@@ -170,7 +173,7 @@
 
 <br><br><br>
 
-
+</section>
 <section id="pie">
     <p class="text-center">Condiciones de uso | Aviso de privacidad | © 1996-2021, Fashin.com, Inc. o afiliados. Todos los derechos reservados.</p>
 </section>
