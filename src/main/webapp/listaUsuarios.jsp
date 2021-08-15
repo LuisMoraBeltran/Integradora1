@@ -22,13 +22,20 @@
                 <th>No.</th>
                 <th>Usuario</th>
                 <th>Contraseña</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
                 <th>Acciones</th>
-            </tr>
-            <c:forEach items="${ListaUsuarios}" var="user" varStatus="status">
+
+            <:forEach items="${ListaUsuarios}" var="user" varStatus="status">/tr>
+
                 <tr>
                     <td>${status.count}</td>
                     <td>${user.user}</td>
                     <td>${user.pass}</td>
+                    <td>${user.name}</td>
+                    <td>${user.lastname}</td>
+                    <td>${user.email}</td>
                     <td>
                         <form action="ServletUsuario" method="PUT">
                             <button type="submit" value="Modificar">Modificar</button>
@@ -37,7 +44,7 @@
                         </form>
                     </td>
                 </tr>
-            </c:forEach>
+            </:forEach>
 
 
         </table>

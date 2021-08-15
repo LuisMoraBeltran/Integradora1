@@ -5,6 +5,12 @@ import mx.edu.utez.crud.util.ConexionMYSQL;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletResponse;
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,9 +22,13 @@ public class DaoUsuario {
     //Metodo para registrar en la tabla usuarios
     public boolean guardarUsuario(Usuario user) {
         try (Connection con = ConexionMYSQL.getConnection()) {
-            try (PreparedStatement pstm = con.prepareStatement("insert into usuarios(user,pass) values(?,?)")) {
+            try (PreparedStatement pstm = con.prepareStatement("insert into usuarios(user,pass,nombre,apellido,correo) values(?,?,?,?,?)")) {
                 pstm.setString(1, user.getUser());
                 pstm.setString(2, user.getPass());
+                pstm.setString(3, user.getName());
+                pstm.setString(4,user.getLastname());
+                pstm.setString(5,user.getEmail());
+
                 return pstm.executeUpdate() == 1;
             } catch (Exception e) {
                 logger.error(e.getMessage());
@@ -28,6 +38,7 @@ public class DaoUsuario {
         }
         return false;
     }
+    //
 
     //Metodo para consultar todos los registros de la tabla usuarios
     public List<Usuario> consultarTodos() {
@@ -41,7 +52,11 @@ public class DaoUsuario {
                 user.setId(rs.getInt("idusuarios"));
                 user.setUser(rs.getString("user"));
                 user.setPass(rs.getString("pass"));
-                listaUsuario.add(user); //Falto esta linea
+                user.setName(rs.getString("nombre"));
+                user.setLastname(rs.getString("apellido"));
+                user.setEmail(rs.getString("correo"));
+
+                listaUsuario.add(user);
             }
         } catch (Exception e) {
             logger.error(e.getMessage());
@@ -154,5 +169,6 @@ public class DaoUsuario {
 
         return status;
     }
+
 
 }
