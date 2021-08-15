@@ -26,7 +26,7 @@
                 <input type="text" id="unid" class="fadeIn second" name="unid" placeholder="Unidad">
             </label>
             <label for="Monto">
-                <input type="password" id="cost" class="fadeIn third" name="cost" placeholder="Monto">
+                <input type="text" id="cost" class="fadeIn third" name="cost" placeholder="Monto">
             </label>
             <label for="Marca">
                 <input type="text" id="marc" class="fadeIn third" name="marc" placeholder="Escribe tu Marca">
