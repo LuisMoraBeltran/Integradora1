@@ -51,9 +51,13 @@ public class ServletUsuario extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String pass = request.getParameter("pass");
         String user = request.getParameter("user");
+        String name = request.getParameter("name");
+        String lastname = request.getParameter("lastname");
+        String email = request.getParameter("email");
 
 
-        Usuario usuario = new Usuario(user, pass);
+
+        Usuario usuario = new Usuario(user, pass, name, lastname,email);
         DaoUsuario userDao = new DaoUsuario();
         if (!userDao.existeUsuario(user)) {
             if (userDao.guardarUsuario(usuario)) {
@@ -67,7 +71,7 @@ public class ServletUsuario extends HttpServlet {
                 request.getRequestDispatcher("registro.jsp").forward(request, response);
             }
         } else {
-            logger.error("Error el usaurio ya existe");
+            logger.error("Error el usuario ya existe");
             request.setAttribute("mensaje", "El usuario ya existe.");
             request.getRequestDispatcher("registro.jsp").forward(request, response);
         }
