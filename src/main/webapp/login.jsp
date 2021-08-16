@@ -24,7 +24,7 @@
                     <label for="login"><input type="text" id="login" class="fadeIn second" name="user" placeholder="Ingresa tu usuario"></label>
                     <label for="pass"><input type="password" id="pass" class="fadeIn third" name="pass" placeholder="Ingresa tu contraseña"></label>
                     <input type="hidden" value="inicioSesion" name="accion">
-                    <input type="submit" class="fadeIn fourth" value="LogIn">
+                    <input type="submit" class="fadeIn fourth" value="Log In">
                     </form>
                 <h2>${mensaje}</h2>
                 <!-- Remind Password -->
