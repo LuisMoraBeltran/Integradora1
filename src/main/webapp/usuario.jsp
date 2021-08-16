@@ -18,7 +18,7 @@
     <body>
         <h1>Modificar el usuario: </h1>
         <%Usuario user = (Usuario)request.getAttribute("user");%>
-        <form action="ServletAcciones" method="post">
+        <form action="ServletAcciones" method="post" enctype="multipart/form-data">
             <h2>Modificar el registro No. ${user.id}</h2>
             <input type="hidden" name="id" value="${user.id}">
             <h4>Usuario: </h4><input type="text" name="user" value="${user.user}">
