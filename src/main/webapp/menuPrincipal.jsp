@@ -19,6 +19,7 @@
     <h3><a href="registroTalla.jsp">Resgistro Tallas</a></h3>
     <h3><a href="registroColor.jsp">Registro Colores</a></h3>
     <h3><a href="registroTipoProducto.jsp">Registro Tipos de Productos</a></h3>
+    <h3><a href="registroTalla_TipoProducto.jsp">Registro Tipo Producto-Talla</a></h3>
     <h3><a href="ServletLogin"> Cerrar Sesión</a></h3>
 
 </body>

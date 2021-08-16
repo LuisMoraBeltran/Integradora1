@@ -1,3 +1,8 @@
+<%@page import="mx.edu.utez.crud.dao.TallaDao"%>
+<%@page import="mx.edu.utez.crud.modelo.Talla"%>
+<%@page import="mx.edu.utez.crud.dao.TipoProductoDao"%>
+<%@page import="mx.edu.utez.crud.modelo.TipoProducto"%>
+<%@page import="java.util.List"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
@@ -8,35 +13,37 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8"%>
 <html>
-<head>
-    <title>Registro Tallas</title>
-</head>
-<body>
-<form action="ServletCliente" method="post">
+    <head>
+        <title>Registro Tallas</title>
+    </head>
+    <body>
+        <h1>${mensaje}</h1>
+        <form action="ServletTallaTipoProducto" method="post">
 
+            <%
+                    List<TipoProducto> listaTipoProductos = new TipoProductoDao().consultarTiposDeProductos();
+                    List<Talla> listaTallas = new TallaDao().consultarTallas();
+            %>
+            <label>Tipo de Producto:</label>
+            <select name="tipoProducto">
+                <option>Seleccione Tipo de producto</option>
+                <% for (TipoProducto tipoProducto : listaTipoProductos) {%>
+                <option value="<%=tipoProducto.getId() %>"><%=tipoProducto.getName() %></option>
+                <%}%>
+            </select>
 
-    <label>
-        <select name="tipoTalla">
-            <jsp:useBean id="talla" scope="request" type="java.util.List"/>
-            <c:forEach var="talla" items="${talla}">
-                <jsp:useBean id="selectedTalla" scope="request"/>
+            <label>Talla: </label>
+            <select name="tallaProducto">
+                <option>Seleccione Talla</option>
+                <% for (Talla talla : listaTallas) {%>
+                <option value="<%=talla.getId() %>" ><%=talla.getName() %></option>
+                <%}%>
+            </select>
+            <input type="submit" class="fadeIn fourth" value="Registrar">
+        </form>
+        <div id="formFooter">
+            <a class="underlineHover" href="ServletTallaTipoProducto" title="Lista Tipo producto-Talla">Lista Tipo producto-Talla</a>
+        </div>
 
-                <option value="${talla.key}" ${talla.key == selectedTalla ? 'selected="Seleccionar talla"' : ''}>${talla.value}</option>
-            </c:forEach>
-        </select>
-    </label>
-
-    <label>
-        <select name="tipoProduct">
-            <jsp:useBean id="tiproduct" scope="request" type="java.util.List"/>
-            <c:forEach var="tiproduct" items="${tiproduct}">
-                <jsp:useBean id="selectedTiproduct" scope="request"/>
-                <option value="${tiproduct.key}" ${tiproduct.key == selectedTiproduct ? 'selected="Seleccionar producto"' : ''}>${tiproduct.value}</option>
-            </c:forEach>
-        </select>
-    </label>
-
-</form>
-
-</body>
+    </body>
 </html>
