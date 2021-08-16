@@ -1,6 +1,6 @@
 package mx.edu.utez.crud.controlador;
 
-import mx.edu.utez.crud.modelo.DaoUsuario;
+import mx.edu.utez.crud.dao.DaoUsuario;
 import mx.edu.utez.crud.modelo.Usuario;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

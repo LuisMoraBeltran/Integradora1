@@ -1,7 +1,7 @@
 package mx.edu.utez.crud.controlador;
 
 import mx.edu.utez.crud.modelo.Cliente;
-import mx.edu.utez.crud.modelo.DaoCliente;
+import mx.edu.utez.crud.dao.DaoCliente;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

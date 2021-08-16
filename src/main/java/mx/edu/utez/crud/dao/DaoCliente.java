@@ -1,4 +1,4 @@
-package mx.edu.utez.crud.modelo;
+package mx.edu.utez.crud.dao;
 
 import mx.edu.utez.crud.util.ConexionMYSQL;
 import org.slf4j.Logger;
@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import mx.edu.utez.crud.modelo.Cliente;
 
 public class DaoCliente {
     Logger logger = LoggerFactory.getLogger(DaoCliente.class);

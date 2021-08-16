@@ -1,4 +1,4 @@
-package mx.edu.utez.crud.modelo;
+package mx.edu.utez.crud.dao;
 
 import com.mysql.cj.protocol.Resultset;
 import mx.edu.utez.crud.util.ConexionMYSQL;
@@ -14,6 +14,7 @@ import java.io.OutputStream;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import mx.edu.utez.crud.modelo.Usuario;
 
 public class DaoUsuario {
 
