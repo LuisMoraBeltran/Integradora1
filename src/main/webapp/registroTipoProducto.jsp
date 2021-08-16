@@ -9,17 +9,17 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 <html>
     <head>
-        <title>Registro Tallas</title>
+        <title>Registro Tipos de Productos</title>
     </head>
     <body>
         <h3>${mensaje}</h3>
-        <form action="ServletTalla" method="post">
-            <label for="Talla">Talla: </label>
-            <input type="text" id="talla" class="fadeIn third" name="talla" placeholder="Talla CH|M|G o 13|15|17 o 28|30|32">
+        <form action="ServletTipoProducto" method="post">
+            <label for="Tipo Producto">Tipo de Producto: </label>
+            <input type="text" id="tipoProducto" class="fadeIn third" name="tipoProducto" placeholder="Playera|Pantalon|Ect...">
             <input type="submit" class="fadeIn fourth" value="Registrar">
         </form>
         <div id="formFooter">
-            <a class="underlineHover" href="ServletTalla" title="Lista Tallas">Lista Tallas</a>
+            <a class="underlineHover" href="ServletTipoProducto" title="Lista de Tipos de Productos">Lista Tipos de Productos</a>
         </div>
     </body>
 </html>

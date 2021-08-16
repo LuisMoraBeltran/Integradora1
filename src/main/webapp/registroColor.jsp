@@ -8,23 +8,18 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
-<head>
-    <title>Registro Colores</title>
-</head>
-<body>
-<form action="ServletCliente" method="post">
-
-    <label>
-        <select name="tipoColor">
-            <jsp:useBean id="color" scope="request" type="java.util.List"/>
-            <c:forEach var="color" items="${color}">
-                <jsp:useBean id="selectedColor" scope="request"/>
-            <option value="${color.key}" ${color.key == selectedColor ? 'selected="Seleccionar color"' : ''}>${color.value}</option>
-            </c:forEach>
-        </select>
-    </label>
-
-</form>
-
-</body>
+    <head>
+        <title>Registro Colores</title>
+    </head>
+    <body>
+        <h3>${mensaje}</h3>
+        <form action="ServletColor" method="post">
+            <label for="Nombre Color">Color: </label>
+            <input type="text" id="color" class="fadeIn third" name="color" placeholder="Nombre del Color">
+            <input type="submit" class="fadeIn fourth" value="Registrar">
+        </form>
+        <div id="formFooter">
+            <a class="underlineHover" href="ServletColor" title="Lista Colores">Lista Colores</a>
+        </div>
+    </body>
 </html>

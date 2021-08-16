@@ -1,6 +1,6 @@
 package mx.edu.utez.crud.controlador;
 
-import mx.edu.utez.crud.dao.DaoUsuario;
+import mx.edu.utez.crud.dao.UsuarioDao;
 import mx.edu.utez.crud.modelo.Usuario;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,7 +32,7 @@ public class ServletAcciones extends HttpServlet {
         usuario.setId(id);
 
 
-        DaoUsuario userDao = new DaoUsuario();
+        UsuarioDao userDao = new UsuarioDao();
         if (userDao.actualizarUsuario(usuario)) {
             logger.info("Actualizado correctamente");
             request.setAttribute("mensaje", "Actualizado correctamente");
@@ -41,7 +41,7 @@ public class ServletAcciones extends HttpServlet {
             logger.error("Error al actualizar");
             request.setAttribute("mensaje", "Error al actualizar");
         }
-        request.setAttribute("ListaUsuarios", new DaoUsuario().consultarTodos());
+        request.setAttribute("ListaUsuarios", new UsuarioDao().consultarTodos());
         request.getRequestDispatcher("listaUsuarios.jsp").forward(request, response);
 
     }

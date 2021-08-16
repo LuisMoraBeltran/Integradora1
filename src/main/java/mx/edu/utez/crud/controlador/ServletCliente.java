@@ -1,7 +1,7 @@
 package mx.edu.utez.crud.controlador;
 
 import mx.edu.utez.crud.modelo.Cliente;
-import mx.edu.utez.crud.dao.DaoCliente;
+import mx.edu.utez.crud.dao.ClienteDao;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,7 +17,7 @@ public class ServletCliente extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        DaoCliente daoCliente = new DaoCliente();
+        ClienteDao daoCliente = new ClienteDao();
         if (request.getParameter("accion") != null) {
             int id = Integer.parseInt(request.getParameter("id"));
             Cliente cliente = new Cliente(id);
@@ -53,7 +53,7 @@ public class ServletCliente extends HttpServlet {
         String direc = request.getParameter("direc");
 
         Cliente cliente = new Cliente(name,pater,mater,correo,telef,direc);
-       DaoCliente clientDao = new DaoCliente();
+       ClienteDao clientDao = new ClienteDao();
         if (!clientDao.existeClient(correo,telef)) {
             if (clientDao.guardarCliente(cliente)) {
                 logger.info("El cliente ha sido registrado");

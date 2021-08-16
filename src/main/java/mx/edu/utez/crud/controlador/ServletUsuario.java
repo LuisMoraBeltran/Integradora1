@@ -1,6 +1,6 @@
 package mx.edu.utez.crud.controlador;
 
-import mx.edu.utez.crud.dao.DaoUsuario;
+import mx.edu.utez.crud.dao.UsuarioDao;
 import mx.edu.utez.crud.modelo.Usuario;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,7 +20,7 @@ public class ServletUsuario extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        DaoUsuario daoUser = new DaoUsuario();
+        UsuarioDao daoUser = new UsuarioDao();
         if (request.getParameter("accion") != null) {
             int id = Integer.parseInt(request.getParameter("id"));
             Usuario user = new Usuario(id);
@@ -58,7 +58,7 @@ public class ServletUsuario extends HttpServlet {
 
 
         Usuario usuario = new Usuario(user, pass, name, lastname,email);
-        DaoUsuario userDao = new DaoUsuario();
+        UsuarioDao userDao = new UsuarioDao();
         if (!userDao.existeUsuario(user)) {
             if (userDao.guardarUsuario(usuario)) {
                 logger.info("El usuario ha sido registrado");

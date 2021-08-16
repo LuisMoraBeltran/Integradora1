@@ -10,7 +10,7 @@
 
 <html>
     <head>
-        <title>Usuarios del Sistema</title>
+        <title>Lista de Tallas</title>
         <link rel="stylesheet" href="static/css/bootstrap.css">
         <link rel="stylesheet" href="static/css/login.css">
     </head>
@@ -20,36 +20,27 @@
         <table>
             <tr>
                 <th>No.</th>
-                <th>Usuario</th>
-                <th>Contraseña</th>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Email</th>
+                <th>Talla</th>
                 <th>Acciones</th>
             </tr>
-            <C:forEach items="${ListaUsuarios}" var="user" varStatus="status">
+            <c:forEach items="${ListaTallas}" var="talla" varStatus="status">
 
                 <tr>
                     <td>${status.count}</td>
-                    <td>${user.user}</td>
-                    <td>${user.pass}</td>
-                    <td>${user.name}</td>
-                    <td>${user.lastname}</td>
-                    <td>${user.email}</td>
+                    <td>${talla.name}</td>
                     <td>
-                        <form action="ServletUsuario" method="PUT">
-                            <button type="submit" value="Modificar">Modificar</button>
+                        <form action="ServletTalla" method="PUT">
                             <button type="submit" name="accion" value="Eliminar">Eliminar</button>
-                            <input type="hidden" name="id" value="${user.id}">
+                            <input type="hidden" name="id" value="${talla.id}">
                         </form>
                     </td>
                 </tr>
-            </C:forEach>
+            </c:forEach>
 
 
         </table>
         <div id="formFooter">
-            <a class="underlineHover" href="menuPrincipal.jsp" title="Salir">Salir</a>
+            <a class="underlineHover" href="menuPrincipal.jsp" title="Salir">Menu Principal</a>
         </div>
         <script src="static/js/bootstrap.js"></script>
     </body>

@@ -1,24 +1,17 @@
 package mx.edu.utez.crud.dao;
 
-import com.mysql.cj.protocol.Resultset;
 import mx.edu.utez.crud.util.ConexionMYSQL;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.servlet.ServletOutputStream;
-import javax.servlet.http.HttpServletResponse;
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import mx.edu.utez.crud.modelo.Usuario;
 
-public class DaoUsuario {
+public class UsuarioDao {
 
-    Logger logger = LoggerFactory.getLogger(DaoUsuario.class);
+    Logger logger = LoggerFactory.getLogger(UsuarioDao.class);
 
     //Metodo para registrar en la tabla usuarios
     public boolean guardarUsuario(Usuario user) {

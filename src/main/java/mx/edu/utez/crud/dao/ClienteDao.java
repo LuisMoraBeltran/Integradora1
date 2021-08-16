@@ -9,8 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 import mx.edu.utez.crud.modelo.Cliente;
 
-public class DaoCliente {
-    Logger logger = LoggerFactory.getLogger(DaoCliente.class);
+public class ClienteDao {
+    Logger logger = LoggerFactory.getLogger(ClienteDao.class);
     public boolean guardarCliente(Cliente client) {
         try (Connection con = ConexionMYSQL.getConnection()) {
             try (PreparedStatement pstm = con.prepareStatement("insert into cliente(nombre,paterno,materno,correo,telefono,direccion) values(?,?,?,?,?,?)")) {

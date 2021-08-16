@@ -1,6 +1,6 @@
 package mx.edu.utez.crud.controlador;
 
-import mx.edu.utez.crud.dao.DaoUsuario;
+import mx.edu.utez.crud.dao.UsuarioDao;
 import mx.edu.utez.crud.modelo.Usuario;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,7 +29,7 @@ public class ServletLogin  extends HttpServlet {
         HttpSession sesionLogin;
 
         Usuario usuario = new Usuario(user, pass);
-        DaoUsuario userDao = new DaoUsuario();
+        UsuarioDao userDao = new UsuarioDao();
 
         switch (peticion) {
             case "inicioSesion":
