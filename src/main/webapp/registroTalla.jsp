@@ -20,6 +20,7 @@
         </form>
         <div id="formFooter">
             <a class="underlineHover" href="ServletTalla" title="Lista Tallas">Lista Tallas</a>
+            <a class="underlineHover" href="menuPrincipal.jsp" title="Menu Principal">Menu Principal</a>
         </div>
     </body>
 </html>

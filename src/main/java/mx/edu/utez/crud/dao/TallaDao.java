@@ -46,6 +46,25 @@ public class TallaDao {
 
     }
 
+    public List<Talla> consultarTallasPorTipoProducto(int idTipoProducto) {
+        List<Talla> listaTallas = new ArrayList<>();
+        try (
+                Connection con = ConexionMYSQL.getConnection();
+                Statement stm = con.createStatement();
+                ResultSet rs = stm.executeQuery("SELECT id_talla, talla FROM crudusuarios.talla "
+                        + "LEFT JOIN crudusuarios.talla_has_tipoProducto ON id_talla = talla_id_talla "
+                        + "WHERE tipoProducto_idtipoProducto =" + idTipoProducto);) {
+            while (rs.next()) {
+                Talla talla = new Talla(rs.getInt("id_talla"), rs.getString("talla"), rs.getInt("usuarios_idusuarios"));
+                listaTallas.add(talla);
+            }
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+        }
+        return listaTallas;
+
+    }
+
     public boolean eliminarTalla(int idTalla) {
         boolean status = false;
         try {

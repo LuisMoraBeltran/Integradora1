@@ -40,7 +40,8 @@
 
         </table>
         <div id="formFooter">
-            <a class="underlineHover" href="menuPrincipal.jsp" title="Salir">Menu Principal</a>
+            <a class="underlineHover" href="menuPrincipal.jsp" title="Menu Principal">Menu Principal</a>
+            <a class="underlineHover" href="registroTalla.jsp" title="Resgistro Tallas">Resgistro Tallas</a>
         </div>
         <script src="static/js/bootstrap.js"></script>
     </body>

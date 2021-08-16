@@ -27,7 +27,7 @@
                 <th>Email</th>
                 <th>Acciones</th>
             </tr>
-            <C:forEach items="${ListaUsuarios}" var="user" varStatus="status">
+            <c:forEach items="${ListaUsuarios}" var="user" varStatus="status">
 
                 <tr>
                     <td>${status.count}</td>
@@ -44,7 +44,7 @@
                         </form>
                     </td>
                 </tr>
-            </C:forEach>
+            </c:forEach>
 
 
         </table>

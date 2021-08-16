@@ -15,6 +15,7 @@
 <br>
     <h3><a href="registro.jsp"> Registro Usuarios </a></h3>
     <h3><a href="ServletUsuario"> Consulta Usuarios</a></h3>
+    <h3><a href="formCliente.jsp">Registro Clientes</a></h3>
     <h3><a href="ServletCliente">Consulta Clientes</a></h3>
     <h3><a href="registroTalla.jsp">Resgistro Tallas</a></h3>
     <h3><a href="registroColor.jsp">Registro Colores</a></h3>

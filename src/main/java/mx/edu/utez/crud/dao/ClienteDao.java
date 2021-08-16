@@ -110,7 +110,7 @@ public class ClienteDao {
         boolean status = false;
         try {
             Connection con = ConexionMYSQL.getConnection();
-            String sql = "UPDATE cliente SET correo=?, telefono=?, direccion=? WHERE id_cliente=" + cliente.getId();
+            String sql = "UPDATE cliente SET correo=?, telefono=?, direccion=?, pass=? WHERE id_cliente=" + cliente.getId();
             PreparedStatement pstm = con.prepareStatement(sql);
             pstm.setString(1, cliente.getCorreo());
             pstm.setString(2,cliente.getTelefono());

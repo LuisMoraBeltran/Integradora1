@@ -7,43 +7,38 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8"%>
 <html>
-<head>
-    <title>Modificar Cliente</title>
-</head>
-<body>
-    <h1>Modificar el cliente: </h1>
-    <%Cliente client = (Cliente) request.getAttribute("Client");%>
-    <form action="ServletCliente" method="post" >
+    <head>
+        <title>Modificar Cliente</title>
+    </head>
+    <body>
+        <h1>Modificar el cliente: </h1>
+        <%Cliente client = (Cliente) request.getAttribute("client");%>
+        <form action="ServletCliente" method="post" >
             <h2>Modificar el registro No. ${client.id}</h2>
             <input type="hidden" name="id" value="${client.id}">
-        <h4>Uusuario: </h4>
-        <label>
-            <input type="text" name="user" value="${client.user}">
-        </label>
-        <h4>Contraseña: </h4>
-        <label>
-            <input type="password" name="pass" value="${client.pass}">
-        </label>
-        <h4>Correo: </h4>
-        <label>
-            <input type="email" name="email" value="${client.correo}">
-        </label>
-        <h4>Telefono: </h4>
-        <label>
-            <input type="text" name="telef" value="${client.telefono}">
-        </label>
-        <h4>Direccion: </h4>
-        <label>
-            <input type="text" name="direc" value="${client.direccion}">
-        </label>
-        <button type="submit" value="Actualizar">Actualizar</button>
-            <h3>Usuario: <%=client.getUser()%></h3>
+            <h4>Contraseña: </h4>
+            <label>
+                <input type="password" name="pass" value="${client.pass}">
+            </label>
+            <h4>Correo: </h4>
+            <label>
+                <input type="email" name="email" value="${client.correo}">
+            </label>
+            <h4>Telefono: </h4>
+            <label>
+                <input type="text" name="telef" value="${client.telefono}">
+            </label>
+            <h4>Direccion: </h4>
+            <label>
+                <input type="text" name="direc" value="${client.direccion}">
+            </label>
+            <button type="submit" value="Actualizar">Actualizar</button>
             <h3>Contraseña: <%=client.getPass()%></h3>
             <h3>Correo: <%=client.getCorreo()%></h3>
             <h3>Telefono: <%=client.getTelefono()%></h3>
             <h3>Direccion: <%=client.getDireccion()%></h3>
 
-    </form>
+        </form>
 
-</body>
+    </body>
 </html>
