@@ -11,15 +11,17 @@ import mx.edu.utez.crud.modelo.Cliente;
 
 public class ClienteDao {
     Logger logger = LoggerFactory.getLogger(ClienteDao.class);
+
     public boolean guardarCliente(Cliente client) {
         try (Connection con = ConexionMYSQL.getConnection()) {
-            try (PreparedStatement pstm = con.prepareStatement("insert into cliente(nombre,paterno,materno,correo,telefono,direccion) values(?,?,?,?,?,?)")) {
+            try (PreparedStatement pstm = con.prepareStatement("insert into cliente(nombre,paterno,materno,correo,telefono,direccion,pass) values(?,?,?,?,?,?,?)")) {
                 pstm.setString(1, client.getName());
                 pstm.setString(2, client.getPater());
                 pstm.setString(3, client.getMater());
                 pstm.setString(4,client.getCorreo());
                 pstm.setString(5, client.getTelefono());
                 pstm.setString(6, client.getDireccion());
+                pstm.setString(7,client.getPass());
                 return pstm.executeUpdate() == 1;
             } catch (Exception e) {
                 logger.error(e.getMessage());
@@ -66,6 +68,7 @@ public class ClienteDao {
                 client.setCorreo(rs.getString("correo"));
                 client.setTelefono(rs.getString("telefono"));
                 client.setDireccion(rs.getString("direccion"));
+                client.setPass(rs.getString("pass"));
 
 
                 listaCliente.add(client); //Falto esta linea
@@ -79,7 +82,7 @@ public class ClienteDao {
 
     //Metodo para consultar por un ID
     public Cliente consultarID(int id) {
-        Cliente client = new Cliente();
+        Cliente client = new Cliente(id);
         try (Connection con = ConexionMYSQL.getConnection();
              PreparedStatement stm = con.prepareStatement("SELECT * FROM cliente WHERE id_cliente=?");) {
             stm.setInt(1, id);
@@ -89,6 +92,7 @@ public class ClienteDao {
                     client.setCorreo(rs.getString("correo"));
                     client.setTelefono(rs.getString("telefono"));
                     client.setDireccion(rs.getString("direccion"));
+                    client.setPass(rs.getString("pass"));
                 }
 
             } catch (Exception e) {
@@ -111,6 +115,7 @@ public class ClienteDao {
             pstm.setString(1, cliente.getCorreo());
             pstm.setString(2,cliente.getTelefono());
             pstm.setString(3,cliente.getDireccion());
+            pstm.setString(4, cliente.getPass());
             if (pstm.executeUpdate() == 1) {
                 status = true;
             }

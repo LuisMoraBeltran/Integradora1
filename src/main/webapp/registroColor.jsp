@@ -5,7 +5,7 @@
   Date: 14/08/2021
   Time: 10:46 p. m.
   To change this template use File | Settings | File Templates.
---%>
+--%><%--@declare id="nombre color"--%>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
     <head>

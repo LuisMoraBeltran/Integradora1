@@ -51,11 +51,13 @@ public class ServletCliente extends HttpServlet {
         String correo = request.getParameter("email");
         String telef = request.getParameter("telef");
         String direc = request.getParameter("direc");
+        String pass = request.getParameter("pass");
 
-        Cliente cliente = new Cliente(name,pater,mater,correo,telef,direc);
-       ClienteDao clientDao = new ClienteDao();
-        if (!clientDao.existeClient(correo,telef)) {
-            if (clientDao.guardarCliente(cliente)) {
+        Cliente cliente = new Cliente();
+        ClienteDao clienteDao = new ClienteDao();
+
+        if (!clienteDao.existeClient(correo,telef)) {
+            if (clienteDao.guardarCliente(cliente)) {
                 logger.info("El cliente ha sido registrado");
                 request.setAttribute("mensaje", "Tus datos han sido registrados");
 
@@ -71,6 +73,5 @@ public class ServletCliente extends HttpServlet {
             request.getRequestDispatcher("formCliente.jsp").forward(request, response);
         }
         doGet(request, response);
-
     }
     }

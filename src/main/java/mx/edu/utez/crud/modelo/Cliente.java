@@ -11,6 +11,7 @@ public class Cliente {
     private String direccion;
     private String pass;
 
+
     public String getPass() {
         return pass;
     }
@@ -26,6 +27,7 @@ public class Cliente {
     public void setId(int id) {
         this.id = id;
     }
+
     public String getName() {
         return name;
     }
@@ -74,13 +76,15 @@ public class Cliente {
         this.direccion = direccion;
     }
 
-    public Cliente(String name, String pater, String mater, String correo, String telefono, String direccion) {
-        this.name = name;
-        this.pater = pater;
-        this.mater = mater;
+    public Cliente(String correo, String telefono, String direccion, String pass) {
         this.correo = correo;
         this.telefono = telefono;
         this.direccion = direccion;
+
+        this.pass = pass;
+    }
+
+    public Cliente() {
     }
 
     public Cliente(int id, String name, String pater, String mater, String correo, String telefono, String direccion, String pass) {
@@ -92,9 +96,6 @@ public class Cliente {
         this.telefono = telefono;
         this.direccion = direccion;
         this.pass = pass;
-    }
-
-    public Cliente() {
     }
 
     public Cliente(int id) {
