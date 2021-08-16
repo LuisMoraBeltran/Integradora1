@@ -16,13 +16,32 @@ public class ServletTallaTipoProducto extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        
+        TallaTipoProductoDao ttpd = new TallaTipoProductoDao();
+        if (request.getParameter("accion") != null) {
+            int idTalla = Integer.parseInt(request.getParameter("idTalla"));
+            int idTipoProducto = Integer.parseInt(request.getParameter("idTipoProducto"));
+
+            if (ttpd.eliminarRelacion(idTalla, idTipoProducto)) {
+                logger.info("Registro Eliminado");
+                request.setAttribute("mensaje", "Registro Eliminado");
+
+            } else {
+                logger.info("Error al eliminar");
+                request.setAttribute("mensaje", "Error al eliminar");
+            }
+            request.setAttribute("ListaTallasTipoProducto", ttpd.consultaTodasLasRelaciones());
+            request.getRequestDispatcher("listaTiposProductos_Tallas.jsp").forward(request, response);
+
+        } else {
+            request.setAttribute("ListaTallasTipoProducto", ttpd.consultaTodasLasRelaciones());
+            request.getRequestDispatcher("listaTiposProductos_Tallas.jsp").forward(request, response);
+        }
     }
     
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int idTalla = Integer.parseInt(request.getParameter("id_talla"));
-        int idTipoProducto = Integer.parseInt(request.getParameter("id_tipoProducto"));
+        int idTalla = Integer.parseInt(request.getParameter("tallaProducto"));
+        int idTipoProducto = Integer.parseInt(request.getParameter("tipoProducto"));
         TallaTipoProductoDao ttpd = new TallaTipoProductoDao();
         if (ttpd.guardarRelacionTallaTipoProducto(idTalla, idTipoProducto)) {
             logger.info("Relacion entre talla y tipo de producto registrada");
