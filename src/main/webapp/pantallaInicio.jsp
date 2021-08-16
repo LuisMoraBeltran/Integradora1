@@ -82,7 +82,7 @@
 
 </ul>
     </div>
-<div  id="promo">lorem
+<div  id="promo"><img src="imagen/Anuncios-1.jpg" class="img-fluid" alt="...">
 </div>
 
 <div class="row">

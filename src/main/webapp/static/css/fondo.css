@@ -11,9 +11,9 @@ body{
 }
 #promo{
     background-color: #0dcaf0;
-    font-size: 100px;
+
     width: 20%;
-    height: auto;
+    height: 20%;
     float: right;
 }
 #normales{
