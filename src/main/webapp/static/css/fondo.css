@@ -1,13 +1,16 @@
 /*margin: arriba,derecha,abajo,izquierda*/
-.body{
-    background: #6c757d;
-}
+
 #carouselExampleIndicators{
     width: 100%;
     height: 350px;
 }
 #fondo{
-    background: #636464;
+    background: #969aa3;
+}
+#fondo2{
+    color: white;
+    background:#001050;
+    height: 10%;
 }
 #promo{
     background-color: #0dcaf0;

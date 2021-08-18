@@ -3,8 +3,9 @@
   User: Usuario
   Date: 11/08/2021
   Time: 09:38 a. m.
-  To change this template use File | Settings | File Templates.
+  por el momento esta interfas esta descartada
 --%>
+
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
     <head>
@@ -14,11 +15,13 @@
         <title id="pie">Registro Cliente</title>
     </head>
     <body>
-
+<div class="container-fluid">
+    <div class="align-content-center">
     <div id="formContent">
 
         <h1>${mensaje}</h1>
         <form action="ServletCliente" method="post" >
+            <h1><i>Registro</i></h1>
             <div id="texto">Nombre(s):</div>
             <input type="text" id="nom" class="fadeIn second" name="nombre" placeholder="Escribe tu nombre">
             <br>
@@ -44,7 +47,7 @@
             <div id="formFooter">
                 <a class="underlineHover" href="pantallaInicio.jsp">Atras</a>
             </div>
-        </form>
-    </div>
+        </form></div>
+    </div></div>
     </body>
 </html>

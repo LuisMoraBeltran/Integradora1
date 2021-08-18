@@ -72,10 +72,10 @@
         <a class="nav-link" href="menuPrincipal.jsp">Verano</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="formCliente.jsp">Iniciar seción</a>
+        <a class="nav-link" href="login.jsp">Iniciar seción</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="login.jsp">.</a>
+        <a class="nav-link" href="login.jsp">  </a>
     </li>
     <li class="nav-item">
         <a class="nav-link disabled" href="login.jsp" tabindex="-1" aria-disabled="true" >Carrito</a>
