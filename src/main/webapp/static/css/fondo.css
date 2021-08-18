@@ -1,6 +1,6 @@
 /*margin: arriba,derecha,abajo,izquierda*/
-body{
-    background: #fd7e14;
+.body{
+    background: #6c757d;
 }
 #carouselExampleIndicators{
     width: 100%;
@@ -26,3 +26,7 @@ body{
     height: 30px;
     padding: 0 2px 2px 2px;
 }
+#texto{ color: white;
+}
+
+

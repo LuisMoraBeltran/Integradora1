@@ -19,8 +19,6 @@
     <link rel="stylesheet" href="static/css/normalize.css">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="static/css/magic.css">
-    <link rel="stylesheet" href="static/css/bootstrap-grid.css">
-    <link rel="stylesheet" href="static/css/bootstrap.rtl.css">
 </head>
 <body>
 <section id="fondo">
@@ -56,25 +54,28 @@
         <a class="nav-link active" href="pantallaInicio.jsp">Inicio</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="pantallaInicio.jsp">Tendencias</a>
+        <a class="nav-link" href="listaUsuarios.jsp">Tendencias</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="pantallaInicio.jsp">Ofertas</a>
+        <a class="nav-link" href="formCliente.jsp">Ofertas</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="pantallaInicio.jsp">Primavera</a>
+        <a class="nav-link" href="listaClient.jsp">Primavera</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="pantallaInicio.jsp">Otoño</a>
+        <a class="nav-link" href="listaColores.jsp">Otoño</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="pantallaInicio.jsp">Invierno</a>
+        <a class="nav-link" href="listaTallas.jsp">Invierno</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="pantallaInicio.jsp">Verano</a>
+        <a class="nav-link" href="menuPrincipal.jsp">Verano</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="login.jsp">Iniciar seción</a>
+        <a class="nav-link" href="formCliente.jsp">Iniciar seción</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="login.jsp">.</a>
     </li>
     <li class="nav-item">
         <a class="nav-link disabled" href="login.jsp" tabindex="-1" aria-disabled="true" >Carrito</a>
@@ -168,18 +169,11 @@
                 <a href="#" class="btn btn-primary">Añadir al carrito</a>
             </div></div></div>
 </div>
-
-
-
 <br><br><br>
-
 </section>
 <section id="pie">
     <p class="text-center">Condiciones de uso | Aviso de privacidad | © 1996-2021, Fashin.com, Inc. o afiliados. Todos los derechos reservados.</p>
 </section>
-
 <script src="static/js/bootstrap.js"></script>
-
-
 </body>
 </html>
