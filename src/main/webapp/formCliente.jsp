@@ -15,8 +15,8 @@
         <title id="pie">Registro Cliente</title>
     </head>
     <body>
-<div class="container-fluid">
-    <div class="align-content-center">
+<div class="containerg">
+    <div class="">
     <div id="formContent">
 
         <h1>${mensaje}</h1>
@@ -38,7 +38,7 @@
             <input type="email" id="eml" class="fadeIn second" name="email" placeholder="Escribe tu correo">
             <br>
             <div id="texto">Telefono:</div>
-            <input type="tel" id="telf" class="fadeIn second" name="telef" placeholder="Escribe tu telefono">
+            <input type="number" id="telf" class="fadeIn second" name="telef" placeholder="Escribe tu telefono">
             <br>
             <div id="texto"> Dirección:</div>
             <input type="text" id="dir" class="fadeIn second" name="direc" placeholder="Escribe tu direccion">
