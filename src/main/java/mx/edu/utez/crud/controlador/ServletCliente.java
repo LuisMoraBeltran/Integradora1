@@ -93,5 +93,6 @@ public class ServletCliente extends HttpServlet {
                 request.getRequestDispatcher("formCliente.jsp").forward(request, response);
             }
         }
+        //Auto increment tipoProducto
     }
 }

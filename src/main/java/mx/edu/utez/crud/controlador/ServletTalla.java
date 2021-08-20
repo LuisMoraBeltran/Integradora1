@@ -28,13 +28,10 @@ public class ServletTalla extends HttpServlet {
                 logger.info("Error al eliminar");
                 request.setAttribute("mensaje", "Error al eliminar");
             }
-            request.setAttribute("ListaTallas", tallaDao.consultarTallas());
-            request.getRequestDispatcher("listaTallas.jsp").forward(request, response);
 
-        } else {
-            request.setAttribute("ListaTallas", tallaDao.consultarTallas());
-            request.getRequestDispatcher("listaTallas.jsp").forward(request, response);
         }
+        request.setAttribute("ListaTallas", tallaDao.consultarTallas());
+        request.getRequestDispatcher("listaTallas.jsp").forward(request, response);
     }
 
     @Override
@@ -47,16 +44,14 @@ public class ServletTalla extends HttpServlet {
             if (tallaDao.guardarTalla(talla)) {
                 logger.info("La talla ha sido registrado");
                 request.setAttribute("mensaje", "Talla Registrada");
-                request.getRequestDispatcher("registroTalla.jsp").forward(request, response);
             } else {
                 logger.error("Error al registrar talla");
                 request.setAttribute("mensaje", "Error al registrar!");
-                request.getRequestDispatcher("registroTalla.jsp").forward(request, response);
             }
         } else {
             logger.error("Error la talla ya existe");
             request.setAttribute("mensaje", "La talla ya existe.");
-            request.getRequestDispatcher("registroTalla.jsp").forward(request, response);
         }
+        request.getRequestDispatcher("registroTalla.jsp").forward(request, response);
     }
 }
