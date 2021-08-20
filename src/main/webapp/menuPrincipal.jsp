@@ -9,19 +9,79 @@
 <html>
 <head>
     <title>Perfil del Administrador</title>
+    <link rel="stylesheet" type="text/css" href="static/css/fondo.css">
+    <link rel="stylesheet" href="static/css/bootstrap.css">
 </head>
-<body>
-<h1>Menú principal</h1>
-<br>
-    <h3><a href="registro.jsp"> Registro Usuarios </a></h3>
-    <h3><a href="ServletUsuario"> Consulta Usuarios</a></h3>
-    <h3><a href="formCliente.jsp">Registro Clientes</a></h3>
-    <h3><a href="ServletCliente">Consulta Clientes</a></h3>
-    <h3><a href="registroTalla.jsp">Resgistro Tallas</a></h3>
-    <h3><a href="registroColor.jsp">Registro Colores</a></h3>
-    <h3><a href="registroTipoProducto.jsp">Registro Tipos de Productos</a></h3>
-    <h3><a href="registroTalla_TipoProducto.jsp">Registro Tipo Producto-Talla</a></h3>
-    <h3><a href="ServletLogin"> Cerrar Sesión</a></h3>
+<body id="fondo">
+<h1 id="fondo2">Menú principal</h1>
+<div class="list-group">
+    <a href="registro.jsp" class="list-group-item list-group-item-action " aria-current="true">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">°  Registro Usuarios </h5>
+        </div>
+        <p class="mb-1">Esta ingresando al Registro de usuarios </p>
+    </a>
+</div>
+<div class="list-group">
+    <a href="ServletUsuario" class="list-group-item list-group-item-action " aria-current="true">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">°  Consulta Usuarios </h5>
+        </div>
+        <p class="mb-1">Esta ingresando a consultar los usuarios registrados</p>
+    </a>
+</div>
+<div class="list-group">
+    <a href="formCliente.jsp" class="list-group-item list-group-item-action " aria-current="true">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">°  Registro Clientes</h5>
+        </div>
+        <p class="mb-1">Esta ingresando al Registro de clientes</p>
+    </a>
+</div>
+<div class="list-group">
+    <a href="ServletCliente" class="list-group-item list-group-item-action " aria-current="true">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">°  Consulta Clientes</h5>
+        </div>
+        <p class="mb-1">Esta ingresando a consultar los usuarios registrados</p>
+    </a>
+</div>
+<div class="list-group">
+    <a href="registroTalla.jsp" class="list-group-item list-group-item-action " aria-current="true">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">°  Resgistro Tallas</h5>
+        </div>
+        <p class="mb-1">Esta ingresando al Registro de tallas </p>
+    </a>
+</div>
+<div class="list-group">
+    <a href="registroColor.jsp" class="list-group-item list-group-item-action " aria-current="true">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">°  Registro Colores</h5>
+        </div>
+        <p class="mb-1">Esta ingresando al Registro de colores </p>
+    </a>
+</div>
+<div class="list-group">
+    <a href="registroTipoProducto.jsp" class="list-group-item list-group-item-action " aria-current="true">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">°  Registro Tipos de Productos</h5>
+        </div>
+        <p class="mb-1">Esta ingresando al Registro de Productos </p>
+    </a>
+</div>
+<div class="list-group">
+    <a href="registroTalla_TipoProducto.jsp" class="list-group-item list-group-item-action " aria-current="true">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">°  Registro Tipo Producto-Talla</h5>
+        </div>
+        <p class="mb-1">Esta ingresando al Registro de Productos y talla</p>
+    </a>
+</div>
+<a href="pantallaInicio.jsp" class="btn btn-dark">Cerrar Sección</a>
+<br><br><br>
+
+
 
 </body>
 </html>

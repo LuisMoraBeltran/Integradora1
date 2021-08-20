@@ -20,6 +20,7 @@
 
                 <!-- Login Form -->
                 <form action="ServletLogin" method="post">
+                    <h1><i>Inicio de secion</i></h1>
                     <label for="login"><input type="text" id="login" class="fadeIn second" name="user" placeholder="Ingresa tu usuario"></label>
                     <label for="pass"><input type="password" id="pass" class="fadeIn third" name="pass" placeholder="Ingresa tu contraseña"></label>
                     <input type="hidden" value="inicioSesion" name="accion">
@@ -29,6 +30,9 @@
                 <!-- Remind Password -->
                 <div id="formFooter">
                     <a class="underlineHover" href="registro.jsp">Registrate</a>
+                </div>
+                <div id="formFooter">
+                    <a class="underlineHover" href="pantallaInicio.jsp">Iniciar sin Usuario</a>
                 </div>
 
             </div>
