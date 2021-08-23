@@ -14,25 +14,27 @@
         <h1>Modificar el cliente: </h1>
         <%Cliente client = (Cliente) request.getAttribute("client");%>
         <form action="ServletCliente" method="post" >
+
             <h2>Modificar el registro No. ${client.id}</h2>
             <input type="hidden" name="id" value="${client.id}">
-            <h4>Contraseña: </h4>
-            <label>
-                <input type="password" name="pass" value="${client.pass}">
-            </label>
             <h4>Correo: </h4>
             <label>
-                <input type="email" name="email" value="${client.correo}">
+                <input type="email" name="email" value="${client.email}">
             </label>
             <h4>Telefono: </h4>
             <label>
-                <input type="text" name="telef" value="${client.telefono}">
+                <input type="number" name="telef" value="${client.telefono}">
             </label>
             <h4>Direccion: </h4>
             <label>
                 <input type="text" name="direc" value="${client.direccion}">
             </label>
+            <h4>Contraseña: </h4>
+            <label>
+                <input type="password" name="pass" value="${client.pass}">
+            </label>
             <button type="submit" value="Actualizar">Actualizar</button>
+
             <h3>Contraseña: <%=client.getPass()%></h3>
             <h3>Correo: <%=client.getCorreo()%></h3>
             <h3>Telefono: <%=client.getTelefono()%></h3>

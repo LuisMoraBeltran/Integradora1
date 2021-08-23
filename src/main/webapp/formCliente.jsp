@@ -3,51 +3,49 @@
   User: Usuario
   Date: 11/08/2021
   Time: 09:38 a. m.
-  por el momento esta interfas esta descartada
+  por el momento esta interfaz esta descartada
 --%>
 
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="static/css/fondo.css">
-        <link rel="stylesheet" type="text/css" href="static/css/login.css">
-        <link rel="stylesheet" href="static/css/bootstrap.css">
-        <title id="pie">Registro Cliente</title>
-    </head>
-    <body>
-<div class="container-fluid">
-    <div class="align-content-center">
-    <div id="formContent">
-
+<head>
+    <title>Registro Cliente</title>
+    <link rel="stylesheet" href="static/css/formClient.css">
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+</head>
+<body>
         <h1>${mensaje}</h1>
-        <form action="ServletCliente" method="post" >
-            <h1><i>Registro</i></h1>
-            <div id="texto">Nombre(s):</div>
-            <input type="text" id="nom" class="fadeIn second" name="nombre" placeholder="Escribe tu nombre">
-            <br>
-            <div id="texto">Apellido Paterno:</div>
-            <input type="text" id="pater" class="fadeIn second" name="patern" placeholder="Escribe tu apellido paterno">
-            <br>
-            <div id="texto">Apellido Materno:</div>
-            <input type="text" id="matern" class="fadeIn second" name="matern" placeholder="Escribe tu apellido paterno">
-            <br>
-            <div id="texto">Contraseña:</div>
-            <input type="password" id="pass" class="fadeIn second" name="pass" placeholder="Escribe tu contraseña">
-            <br>
-            <div id="texto">Correo:</div>
-            <input type="email" id="eml" class="fadeIn second" name="email" placeholder="Escribe tu correo">
-            <br>
-            <div id="texto">Telefono:</div>
-            <input type="tel" id="telf" class="fadeIn second" name="telef" placeholder="Escribe tu telefono">
-            <br>
-            <div id="texto"> Dirección:</div>
-            <input type="text" id="dir" class="fadeIn second" name="direc" placeholder="Escribe tu direccion">
-            <br>
-            <input type="submit" class="fadeIn fourth" value="Registrar">
-            <div id="formFooter">
-                <a class="underlineHover" href="pantallaInicio.jsp">Atras</a>
+        <div class="wrapper fadeInDown">
+            <div id="formContent">
+                <h1><i>Inicio de sesión</i></h1>
+                <h2>Ingresa tus datos para el registro</h2>
+                <form action="ServletCliente" method="post">
+                    <label for="name">
+                            <input type="text" id="name" class="fadeIn third" name="name" placeholder="Nombre">
+                        </label>
+                        <label for="lastname">
+                            <input type="text" id="lastname" class="fadeIn third" name="lastname"
+                                   placeholder="Apellido Paterno">
+                        </label>
+                        <label for="secondlastname">
+                            <input type="text" id="secondlastname" class="fadeIn second" name="secondlastname" placeholder="Apellido Materno">
+                        </label>
+                        <label for="pass">
+                            <input type="password" id="pass" class="fadeIn third" name="pass"
+                                   placeholder="Password">
+                        </label>
+                        <label for="eml">
+                            <input type="email" id="eml" class="fadeIn third" name="email" placeholder="Correo">
+                        </label><br>
+                        <label for="telf">
+                            <input type="number" id="telf" class="fadeIn third" name="telf" placeholder="Telefono">
+                        </label><br>
+                        <label for="dir">
+                            <input type="text" id="dir" class="fadeIn third" name="dir" placeholder="Dirección">
+                        </label><br>
+                        <input type="submit" class="fadeIn fourth" value="Registrar">
+                </form>
             </div>
-        </form></div>
-    </div></div>
-    </body>
+        </div>
+</body>
 </html>

@@ -5,22 +5,16 @@ and open the template in the editor.
 */
 /*
     Created on : 18/07/2021, 10:30:30 AM
-    Author     : LuisB
-*/
-
-
+    Author     : LuisB*/
 /* BASIC */
-
 html {
-    background-color: #56baed;
+    /* Color de transicion entre pantalla principal y login  */
 }
-
 body {
     font-family: "Poppins", sans-serif;
     height: 100vh;
-    background-color: coral;
+    background-color: #bcbebe;
 }
-
 a {
     color: #92badd;
     display:inline-block;
@@ -31,23 +25,17 @@ h1{
     text-align: center;
     text-transform: uppercase;
     margin: 10px 8px 10px 8px;
-    color: #0d0d0d;
-
+    color: #ffffff;
 }
-
 h2 {
     text-align: center;
     font-size: 16px;
     font-weight: 300;
     text-transform: uppercase;
     margin: 10px 8px 10px 8px;
-    color: #ece6e7;
+    color: #070707;
 }
-
-
-
 /* STRUCTURE */
-
 .wrapper {
     display: flex;
     align-items: center;
@@ -57,26 +45,38 @@ h2 {
     min-height: 100%;
     padding: 20px;
 }
-
-#formContent1 {
+#formContent {
     -webkit-border-radius: 10px 10px 10px 10px;
     border-radius: 10px 10px 10px 10px;
-    background: #00FEF6FF;
+    background: #001050;
     padding: 30px;
     width: 90%;
     max-width: 450px;
     position: relative;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
     box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    text-align: center;
+}
+#formContent1 {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background: #001050;
+    padding: 30px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    -webkit-box-shadow: 0 30px 60px 0 rgb(255, 255, 255);
+    box-shadow: 0 30px 60px 0 rgb(248, 247, 247);
     text-align: center;
 }
 
 #formFooter {
-    background-color: #f6f6f6;
+    background-color: #8f8989;
     border-top: 1px solid #dce8f1;
     padding: 25px;
     text-align: center;
     -webkit-border-radius: 0 0 10px 10px;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 0 0;
 }
 #formFooter1 {
     background-color: #fd8b00;
@@ -84,7 +84,7 @@ h2 {
     padding: 25px;
     text-align: center;
     -webkit-border-radius: 0 0 10px 10px;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 0 0;
 }
 
 /* TABS */
@@ -102,7 +102,7 @@ h2.active {
 
 /* FORM TYPOGRAPHY*/
 
-input[type=button], input[type=submit], input[type=reset], input[type=number]  {
+input[type=button], input[type=submit], input[type=reset]  {
     background-color: #56baed;
     border: none;
     color: white;
@@ -123,7 +123,7 @@ input[type=button], input[type=submit], input[type=reset], input[type=number]  {
     transition: all 0.3s ease-in-out;
 }
 
-input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
     background-color: #39ace7;
 }
 
@@ -159,7 +159,8 @@ input[type=text]:focus , input[type=password]:focus, input[type=email]:focus, in
     border-bottom: 2px solid #5fbae9;
 }
 
-input[type=text]::placeholder , input[type=password]::placeholder, input[type=email]::placeholder, input[type=number]::placeholder{
+input[type=text]::placeholder , input[type=password]::placeholder,
+input[type=email]::placeholder, input[type=number]::placeholder{
     color: #cccccc;
 }
 
@@ -278,4 +279,6 @@ input[type=text]::placeholder , input[type=password]::placeholder, input[type=em
 #icon {
     width:60%;
 }
+
+
 

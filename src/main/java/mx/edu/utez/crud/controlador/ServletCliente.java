@@ -49,12 +49,12 @@ public class ServletCliente extends HttpServlet {
         Cliente cliente;
         if (request.getParameter("id") != null) {
             int id = Integer.parseInt((request.getParameter("id")));
-            String correo = request.getParameter("email");
+            String email = request.getParameter("email");
             String telef = request.getParameter("telef");
             String direc = request.getParameter("direc");
             String pass = request.getParameter("pass");
 
-            cliente = new Cliente(id, correo, telef, direc, pass);
+            cliente = new Cliente(id,email, telef, direc,pass);
             if (clienteDao.actualizarCliente(cliente)) {
                 logger.info("El cliente ha sido registrado");
                 request.setAttribute("mensaje", "Tus datos han sido registrados");
