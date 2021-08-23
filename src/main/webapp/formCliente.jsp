@@ -8,46 +8,52 @@
 
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="static/css/fondo.css">
-        <link rel="stylesheet" type="text/css" href="static/css/login.css">
-        <link rel="stylesheet" href="static/css/bootstrap.css">
-        <title id="pie">Registro Cliente</title>
-    </head>
-    <body>
-<div class="containerg">
-    <div class="">
+<head>
+    <title>Registro Cliente</title>
+    <link rel="stylesheet" href="static/css/formClient.css">
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <link rel="stylesheet" href="static/css/fondo.css">
+</head>
+<body>
+<h1>${mensaje}</h1>
+<div class="wrapper fadeInDown">
     <div id="formContent">
-
-        <h1>${mensaje}</h1>
-        <form action="ServletCliente" method="post" >
-            <h1><i>Registro</i></h1>
-            <div id="texto">Nombre(s):</div>
-            <input type="text" id="nom" class="fadeIn second" name="nombre" placeholder="Escribe tu nombre">
-            <br>
-            <div id="texto">Apellido Paterno:</div>
-            <input type="text" id="pater" class="fadeIn second" name="patern" placeholder="Escribe tu apellido paterno">
-            <br>
+        <h1><i>Inicio de sesión</i></h1>
+        <h4 id="texto">Ingresa tus datos para el registro</h4>
+        <form action="ServletCliente" method="post">
+            <label for="name">
+                <div id="texto">Nombre(s):</div>
+                <input type="text" id="name" class="fadeIn third" name="name" placeholder="Nombre">
+            </label><br>
+            <label for="lastname"><div id="texto">Apellido Paterno:</div>
+                <input type="text" id="lastname" class="fadeIn third" name="lastname" placeholder="Apellid. Paterno">
+            </label><br>
             <div id="texto">Apellido Materno:</div>
-            <input type="text" id="matern" class="fadeIn second" name="matern" placeholder="Escribe tu apellido paterno">
-            <br>
-            <div id="texto">Contraseña:</div>
-            <input type="password" id="pass" class="fadeIn second" name="pass" placeholder="Escribe tu contraseña">
-            <br>
-            <div id="texto">Correo:</div>
-            <input type="email" id="eml" class="fadeIn second" name="email" placeholder="Escribe tu correo">
-            <br>
-            <div id="texto">Telefono:</div>
-            <input type="number" id="telf" class="fadeIn second" name="telef" placeholder="Escribe tu telefono">
-            <br>
-            <div id="texto"> Dirección:</div>
-            <input type="text" id="dir" class="fadeIn second" name="direc" placeholder="Escribe tu direccion">
-            <br>
+            <label for="secondlastname">
+                <input type="text" id="secondlastname" class="fadeIn second" name="secondlastname"
+                       placeholder="Apellid. Materno">
+            </label><br>
+            <label for="pass">
+                <div id="texto">Contraseña:</div>
+                <input type="password" id="pass" class="fadeIn third" name="pass" placeholder="Password">
+            </label><br>
+            <label for="eml">
+                <div id="texto">Correo:</div>
+                <input type="email" id="eml" class="fadeIn third" name="email" placeholder="Correo">
+            </label><br>
+            <label for="telf">
+                <div id="texto">Teléfono:</div>
+                <input type="number" id="telf" class="fadeIn third" name="telf" placeholder="Telefono">
+            </label><br>
+            <label for="dir">
+                <div id="texto">Dirección:</div>
+                <input type="text" id="dir" class="fadeIn third" name="dir" placeholder="Dirección">
+            </label><br>
             <input type="submit" class="fadeIn fourth" value="Registrar">
-            <div id="formFooter">
+            <div>
                 <a class="underlineHover" href="pantallaInicio.jsp">Atras</a>
             </div>
-        </form></div>
+        </form>
     </div></div>
     </body>
 </html>
