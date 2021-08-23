@@ -7,12 +7,13 @@
         <title>Registro</title>
         <link rel="stylesheet" href="static/css/bootstrap.css">
         <link rel="stylesheet" href="static/css/login.css">
+        <link rel="stylesheet" type="text/css" href="static/css/fondo.css">
     </head>
     <body>
         <div class="wrapper fadeInDown">
             <div id="formContent1">
                 <h1><i>Inicio de sesión</i></h1>
-                <h2>Ingresa datos para el registro</h2>
+                <h2 id="texto">Ingresa datos para el registro</h2>
                 <form action="ServletUsuario" method="post">
 
                     <label for="Name">

@@ -12,6 +12,7 @@
         <title>Registro Tallas</title>
         <link rel="stylesheet" href="static/css/bootstrap.css">
         <link rel="stylesheet" href="static/css/login.css">
+        <link rel="stylesheet" type="text/css" href="static/css/fondo.css">
     </head>
     <body>
     <div id="formContent">
@@ -23,6 +24,8 @@
         </form>
         <div id="formFooter">
             <a class="underlineHover" href="ServletTalla" title="Lista Tallas">Lista Tallas</a>
+        </div>
+            <div id="formFooter">
             <a class="underlineHover" href="menuPrincipal.jsp" title="Menu Principal">Menu Principal</a>
         </div>
     </div>

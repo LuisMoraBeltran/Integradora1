@@ -51,7 +51,7 @@
     <div id="pie">
 <ul class="nav">
     <li class="nav-item">
-        <a class="nav-link active" href="pantallaInicio.jsp">Inicio</a>
+        <a class="nav-link active" href="menuPrincipal.jsp">Inicio</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="pantallaInicio.jsp">Tendencias</a>

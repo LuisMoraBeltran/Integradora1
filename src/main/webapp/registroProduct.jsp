@@ -20,6 +20,7 @@
         <title>Registro Producto</title>
         <link rel="stylesheet" href="static/css/bootstrap.css">
         <link rel="stylesheet" href="static/css/login.css">
+        <link rel="stylesheet" type="text/css" href="static/css/fondo.css">
     </head>
     <body>
     <div id="formContent">
