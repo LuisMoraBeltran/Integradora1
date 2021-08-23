@@ -32,14 +32,35 @@ public class ClienteDao {
         return false;
     }
 
-    //Metodo para validar usuario
+    //Metodo para login usuario
+    public Cliente loginCliente(Cliente correo) {
+
+        try (Connection con = ConexionMYSQL.getConnection();
+             PreparedStatement stm = con.prepareStatement("SELECT * FROM cliente WHERE correo=? AND pass=?")) {
+            stm.setString(1, correo.getCorreo());
+            stm.setString(2, correo.getPass());
+            try (ResultSet rs = stm.executeQuery()) {
+                while (rs.next()) {
+                    correo.setId(rs.getInt("idclientes"));
+                    return correo;
+                }
+            } catch (Exception e) {
+                logger.error(e.getMessage());
+            }
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+        }
+        return null;
+    }
+
+    //Metodo para validar cliente
     public boolean existeClient(String correo, String telef) {
         boolean status = false;
         try (Connection con = ConexionMYSQL.getConnection();
              PreparedStatement stm = con.prepareStatement("SELECT * FROM cliente WHERE correo=? AND telefono=?")) {
             stm.setString(1, correo);
             stm.setString(2,telef);
-            try (ResultSet rs = stm.executeQuery();) {
+            try (ResultSet rs = stm.executeQuery()) {
                 while (rs.next()) {
                     status = true;
                 }
@@ -58,7 +79,7 @@ public class ClienteDao {
         try (
                 Connection con = ConexionMYSQL.getConnection();
                 Statement stm = con.createStatement();
-                ResultSet rs = stm.executeQuery("SELECT * FROM cliente");) {
+                ResultSet rs = stm.executeQuery("SELECT * FROM cliente")) {
             while (rs.next()) {
                 Cliente client = new Cliente();
                 client.setId(rs.getInt("id_cliente"));
@@ -84,9 +105,9 @@ public class ClienteDao {
     public Cliente consultarID(int id) {
         Cliente client = new Cliente(id);
         try (Connection con = ConexionMYSQL.getConnection();
-             PreparedStatement stm = con.prepareStatement("SELECT * FROM cliente WHERE id_cliente=?");) {
+             PreparedStatement stm = con.prepareStatement("SELECT * FROM cliente WHERE id_cliente=?")) {
             stm.setInt(1, id);
-            try (ResultSet rs = stm.executeQuery();) {
+            try (ResultSet rs = stm.executeQuery()) {
                 while (rs.next()) {
                     client.setId(rs.getInt("id_cliente"));
                     client.setCorreo(rs.getString("correo"));

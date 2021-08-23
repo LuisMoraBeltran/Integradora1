@@ -11,9 +11,10 @@
     <body>
         <div class="wrapper fadeInDown">
             <div id="formContent1">
-                <h1><i>Inicio de secion</i></h1>
+                <h1><i>Inicio de sesión</i></h1>
                 <h2>Ingresa datos para el registro</h2>
                 <form action="ServletUsuario" method="post">
+
                     <label for="Name">
                         <input type="text" id="name" class="fadeIn third" name="name" placeholder="Nombre">
                     </label>
@@ -28,8 +29,7 @@
                     </label>
                     <label for="Email">
                         <input type="email" id="email" class="fadeIn third" name="email" placeholder="Correo">
-                    </label>
-                        <br>
+                    </label><br>
                     <input type="submit" class="fadeIn fourth" value="Registrar" >
                 </form>
                 <h3>${mensaje}</h3>

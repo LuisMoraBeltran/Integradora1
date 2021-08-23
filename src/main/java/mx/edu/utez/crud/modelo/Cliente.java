@@ -14,6 +14,17 @@ public class Cliente {
     public Cliente() {
     }
 
+    public Cliente(String correo, String pass) {
+        this.correo=correo;
+        this.pass=pass;
+    }
+
+    public Cliente(int id,String correo, String pass) {
+        this.id=id;
+        this.correo=correo;
+        this.pass=pass;
+    }
+
     public Cliente(int id, String correo, String telefono, String direccion, String pass) {
         this.id = id;
         this.correo = correo;
