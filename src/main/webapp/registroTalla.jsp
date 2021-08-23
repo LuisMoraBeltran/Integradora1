@@ -10,11 +10,14 @@
 <html>
     <head>
         <title>Registro Tallas</title>
+        <link rel="stylesheet" href="static/css/bootstrap.css">
+        <link rel="stylesheet" href="static/css/login.css">
     </head>
     <body>
+    <div id="formContent">
         <h3>${mensaje}</h3>
         <form action="ServletTalla" method="post">
-            <label for="Talla">Talla: </label>
+            <label for="Talla" id="texto">Talla: </label>
             <input type="text" id="talla" class="fadeIn third" name="talla" placeholder="Talla CH|M|G o 13|15|17 o 28|30|32">
             <input type="submit" class="fadeIn fourth" value="Registrar">
         </form>
@@ -22,5 +25,6 @@
             <a class="underlineHover" href="ServletTalla" title="Lista Tallas">Lista Tallas</a>
             <a class="underlineHover" href="menuPrincipal.jsp" title="Menu Principal">Menu Principal</a>
         </div>
+    </div>
     </body>
 </html>

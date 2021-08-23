@@ -15,8 +15,11 @@
 <html>
     <head>
         <title>Registro Tallas</title>
+        <link rel="stylesheet" href="static/css/bootstrap.css">
+        <link rel="stylesheet" href="static/css/login.css">
     </head>
     <body>
+    <div id="formContent">
         <h1>${mensaje}</h1>
         <form action="ServletTallaTipoProducto" method="post">
 
@@ -24,7 +27,7 @@
                     List<TipoProducto> listaTipoProductos = new TipoProductoDao().consultarTiposDeProductos();
                     List<Talla> listaTallas = new TallaDao().consultarTallas();
             %>
-            <label>Tipo de Producto:</label>
+            <label id="texto">Tipo de Producto:</label>
             <select name="tipoProducto">
                 <option>Seleccione Tipo de producto</option>
                 <% for (TipoProducto tipoProducto : listaTipoProductos) {%>
@@ -32,7 +35,7 @@
                 <%}%>
             </select>
 
-            <label>Talla: </label>
+            <label id="texto">Talla: </label>
             <select name="tallaProducto">
                 <option>Seleccione Talla</option>
                 <% for (Talla talla : listaTallas) {%>
@@ -44,6 +47,7 @@
         <div id="formFooter">
             <a class="underlineHover" href="ServletTallaTipoProducto" title="Lista Tipo producto-Talla">Lista Tipo producto-Talla</a>
         </div>
+    </div>
 
     </body>
 </html>

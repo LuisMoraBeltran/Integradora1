@@ -18,9 +18,11 @@
 <html>
     <head>
         <title>Registro Producto</title>
+        <link rel="stylesheet" href="static/css/bootstrap.css">
+        <link rel="stylesheet" href="static/css/login.css">
     </head>
     <body>
-
+    <div id="formContent">
         <form action="ServletCliente" method="post">
 
             <label for="Nombre Producto">
@@ -74,6 +76,6 @@
             <input type="submit" class="fadeIn fourth" value="Registrar">
 
         </form>
-
+    </div>
     </body>
 </html>

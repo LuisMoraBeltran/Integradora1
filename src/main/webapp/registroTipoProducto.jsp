@@ -10,8 +10,11 @@
 <html>
     <head>
         <title>Registro Tipos de Productos</title>
+        <link rel="stylesheet" href="static/css/bootstrap.css">
+        <link rel="stylesheet" href="static/css/login.css">
     </head>
     <body>
+    <div id="formContent">
         <h3>${mensaje}</h3>
         <form action="ServletTipoProducto" method="post">
             <label for="Tipo Producto">Tipo de Producto: </label>
@@ -21,5 +24,6 @@
         <div id="formFooter">
             <a class="underlineHover" href="ServletTipoProducto" title="Lista de Tipos de Productos">Lista Tipos de Productos</a>
         </div>
+    </div>
     </body>
 </html>

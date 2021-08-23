@@ -9,8 +9,11 @@
 <html>
 <head>
     <title>Registro Colores</title>
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <link rel="stylesheet" href="static/css/login.css">
 </head>
 <body>
+<div id="formContent">
 
 </body>
 </html>

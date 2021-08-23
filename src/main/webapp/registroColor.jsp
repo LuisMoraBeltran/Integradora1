@@ -10,16 +10,20 @@
 <html>
     <head>
         <title>Registro Colores</title>
+        <link rel="stylesheet" href="static/css/bootstrap.css">
+        <link rel="stylesheet" href="static/css/login.css">
     </head>
     <body>
+    <div id="formContent">
         <h3>${mensaje}</h3>
-        <form action="ServletColor" method="post">
-            <label for="Nombre Color">Color: </label>
+        <form action="ServletColor" method="post" >
+            <label for="Nombre Color" id="texto" >Color: </label>
             <input type="text" id="color" class="fadeIn third" name="color" placeholder="Nombre del Color">
             <input type="submit" class="fadeIn fourth" value="Registrar">
         </form>
         <div id="formFooter">
             <a class="underlineHover" href="ServletColor" title="Lista Colores">Lista Colores</a>
         </div>
+    </div>
     </body>
 </html>

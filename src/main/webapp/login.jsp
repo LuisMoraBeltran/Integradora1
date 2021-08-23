@@ -35,7 +35,6 @@
                 <div id="formFooter">
                     <a class="underlineHover" href="pantallaInicio.jsp">Iniciar sin Usuario</a>
                 </div>
-
             </div>
         </div>
         <script src="static/js/bootstrap.js"></script>
