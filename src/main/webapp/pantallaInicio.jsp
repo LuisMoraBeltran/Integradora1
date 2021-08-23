@@ -54,25 +54,25 @@
         <a class="nav-link active" href="pantallaInicio.jsp">Inicio</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="listaUsuarios.jsp">Tendencias</a>
+        <a class="nav-link" href="pantallaInicio.jsp">Tendencias</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="formCliente.jsp">Ofertas</a>
+        <a class="nav-link" href="pantallaInicio.jsp">Ofertas</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="listaClient.jsp">Primavera</a>
+        <a class="nav-link" href="pantallaInicio.jsp">Primavera</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="listaColores.jsp">Otoño</a>
+        <a class="nav-link" href="pantallaInicio.jsp">Otoño</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="listaTallas.jsp">Invierno</a>
+        <a class="nav-link" href="pantallaInicio.jsp">Invierno</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="menuPrincipal.jsp">Verano</a>
+        <a class="nav-link" href="pantallaInicio.jsp">Verano</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="login.jsp">Iniciar seción</a>
+        <a class="nav-link" href="formCliente.jsp">Iniciar sesión</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="login.jsp">  </a>
