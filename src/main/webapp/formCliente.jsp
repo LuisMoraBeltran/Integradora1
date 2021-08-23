@@ -8,7 +8,8 @@
 
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
-<head>
+=======
+   <head>
     <title>Registro Cliente</title>
     <link rel="stylesheet" href="static/css/formClient.css">
     <link rel="stylesheet" href="static/css/bootstrap.css">
@@ -45,7 +46,4 @@
                         </label><br>
                         <input type="submit" class="fadeIn fourth" value="Registrar">
                 </form>
-            </div>
-        </div>
-</body>
 </html>
