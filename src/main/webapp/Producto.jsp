@@ -7,29 +7,29 @@
 --%>
 <%--@declare id="producto"--%><%--@declare id="descripcion"--%><%--@declare id="unidades"--%>
 <%--@declare id="monto"--%><%--@declare id="costo"--%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="" %>
 
 <html>
 <head>
-    <title>Producto</title>
+    <title>Registro de Producto</title>
 </head>
 <body>
 
 
 
-    <label for="Producto">Nombre del producto:</label>
+    <label for="product">Nombre del producto:</label>
     <input type="text" id="product" class="fadeIn third" name="product" placeholder="Nombre del producto"><br>
 
-    <label for="Descripcion">Descripción:</label>
+    <label for="descrip">Descripción:</label>
     <input type="text" id="descrip" class="fadeIn third" name="descrip" placeholder="Descripcion del producto"><br>
 
-    <label for="Unidades">Unidades:</label>
+    <label for="unid">Unidades:</label>
     <input type="text" id="unid" class="fadeIn third" name="unid" placeholder="Unidades disponibles"><br>
 
-    <label for="Monto">Monto:</label>
+    <label for="mont">Monto:</label>
     <input type="text" id="mont" class="fadeIn third" name="mont" placeholder="Monto del producto"><br>
 
-    <label for="Costo">Costo:</label>
+    <label for="cost">Costo:</label>
     <input type="text" id="cost" class="fadeIn third" name="cost" placeholder="Costo producto"><br>
 
     <input type="submit" class="fadeIn fourth" value="Publicar">

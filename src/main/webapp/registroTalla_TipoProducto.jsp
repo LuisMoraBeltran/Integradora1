@@ -14,7 +14,7 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 <html>
     <head>
-        <title>Registro Tallas</title>
+        <title>Registro Tallas Productos</title>
     </head>
     <body>
         <h1>${mensaje}</h1>
@@ -25,20 +25,24 @@
                     List<Talla> listaTallas = new TallaDao().consultarTallas();
             %>
             <label>Tipo de Producto:</label>
-            <select name="tipoProducto">
-                <option>Seleccione Tipo de producto</option>
-                <% for (TipoProducto tipoProducto : listaTipoProductos) {%>
-                <option value="<%=tipoProducto.getId() %>"><%=tipoProducto.getName() %></option>
-                <%}%>
-            </select>
+            <label>
+                <select name="tipoProducto">
+                    <option>Seleccione Tipo de producto</option>
+                    <% for (TipoProducto tipoProducto : listaTipoProductos) {%>
+                    <option value="<%=tipoProducto.getId() %>"><%=tipoProducto.getName() %></option>
+                    <%}%>
+                </select>
+            </label>
 
             <label>Talla: </label>
-            <select name="tallaProducto">
-                <option>Seleccione Talla</option>
-                <% for (Talla talla : listaTallas) {%>
-                <option value="<%=talla.getId() %>" ><%=talla.getName() %></option>
-                <%}%>
-            </select>
+            <label>
+                <select name="tallaProducto">
+                    <option>Seleccione Talla</option>
+                    <% for (Talla talla : listaTallas) {%>
+                    <option value="<%=talla.getId() %>" ><%=talla.getName() %></option>
+                    <%}%>
+                </select>
+            </label>
             <input type="submit" class="fadeIn fourth" value="Registrar">
         </form>
         <div id="formFooter">
