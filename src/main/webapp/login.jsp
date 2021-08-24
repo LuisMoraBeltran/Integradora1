@@ -25,11 +25,11 @@
                     <label for="login"><input type="text" id="login" class="fadeIn second" name="user" placeholder="Ingresa tu usuario"></label>
                     <label for="pass"><input type="password" id="pass" class="fadeIn third" name="pass" placeholder="Ingresa tu contraseña"></label>
                     <input type="hidden" value="inicioSesion" name="accion">
-                    <input type="submit" class="fadeIn fourth" value="Log In">
+                    <input type="submit" class="fadeIn fourth" value="Iniciar Sesión">
                     </form>
                 <h2>${mensaje}</h2>
                 <!-- Remind Password -->
-                <div id="formFooter2">
+                <div id="formFooter">
                     <a class="underlineHover" href="registro.jsp">Registrate</a>
                 </div>
                 <div id="formFooter">

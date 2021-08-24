@@ -12,13 +12,15 @@
     <title>Registro Cliente</title>
     <link rel="stylesheet" href="static/css/formClient.css">
     <link rel="stylesheet" href="static/css/bootstrap.css">
+       <link rel="stylesheet" href="static/css/fondo.css">
+       <link rel="stylesheet" href="static/css/login.css">
 </head>
    <body>
    <h1>${mensaje}</h1>
    <div class="wrapper fadeInDown">
        <div id="formContent">
            <h1><i>Inicio de sesión</i></h1>
-           <h2>Ingresa tus datos para el registro</h2>
+           <h4 id="texto">Ingresa tus datos para el registro</h4>
            <form action="ServletCliente" method="post">
                <label for="name">
                    <div id="texto">Nombre(s):</div>
@@ -34,7 +36,7 @@
                </label><br>
                <label for="pass">
                    <div id="texto">Contraseña:</div>
-                   <input type="password" id="pass" class="fadeIn third" name="pass" placeholder="Password">
+                   <input type="password" id="pass" class="fadeIn third" name="pass" placeholder="Contraseña">
                </label><br>
                <label for="eml">
                    <div id="texto">Correo:</div>
@@ -42,13 +44,16 @@
                </label><br>
                <label for="telf">
                    <div id="texto">Teléfono:</div>
-                   <input type="tel" id="telf" class="fadeIn third" name="telef" placeholder="Telefono">
+                   <input type="number" id="telf" class="fadeIn third" name="telef" placeholder="Telefono">
                </label><br>
                <label for="dir">
                    <div id="texto">Dirección:</div>
                    <input type="text" id="dir" class="fadeIn third" name="direc" placeholder="Dirección">
                </label><br>
                <input type="submit" class="fadeIn fourth" value="Registrar">
+               <div id="formFooter">
+                   <a class="underlineHover" href="pantallaInicio.jsp">Iniciar sin Usuario</a>
+               </div>
            </form>
        </div>
    </div>

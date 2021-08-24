@@ -31,13 +31,13 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="..." class="d-block w-100" alt="...">
+                <img src="" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
+                <img src="" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
+                <img src="" class="d-block w-100" alt="...">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -91,7 +91,25 @@
 <div class="row">
     <div class="col-sm-4">
     <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="imagen/ropa1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Conjunto</h5>
+            <p class="card-text"> Mezclilla </p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+            <a href="#" class="btn btn-primary">Añadir al carrito</a>
+        </div></div></div>
+<div class="col-sm-4">
+    <div class="card" style="width: 18rem;">
+        <img src="imagen/ropa4.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Pantalon</h5>
+            <p class="card-text"> Mezclilla </p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+            <a href="#" class="btn btn-primary">Añadir al carrito</a>
+        </div></div></div>
+<div class="col-sm-4">
+    <div class="card" style="width: 18rem;">
+        <img src="imagen/ropa3.jpg" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">titulo</h5>
             <p class="card-text"> descripcion </p>
@@ -100,25 +118,7 @@
         </div></div></div>
 <div class="col-sm-4">
     <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">titulo</h5>
-            <p class="card-text"> descripcion </p>
-            <a href="#" class="btn btn-primary">Comprar</a>
-            <a href="#" class="btn btn-primary">Añadir al carrito</a>
-        </div></div></div>
-<div class="col-sm-4">
-    <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">titulo</h5>
-            <p class="card-text"> descripcion </p>
-            <a href="#" class="btn btn-primary">Comprar</a>
-            <a href="#" class="btn btn-primary">Añadir al carrito</a>
-        </div></div></div>
-<div class="col-sm-4">
-    <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="imagen/ropa4.jpg" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">titulo</h5>
             <p class="card-text"> descripcion </p>

@@ -7,7 +7,7 @@
         <title>Registro</title>
         <link rel="stylesheet" href="static/css/bootstrap.css">
         <link rel="stylesheet" href="static/css/login.css">
-        <link rel="stylesheet" type="text/css" href="static/css/fondo.css">
+        <link rel="stylesheet"  href="static/css/fondo.css">
     </head>
     <body>
         <div class="wrapper fadeInDown">
@@ -32,11 +32,10 @@
                         <input type="email" id="email" class="fadeIn third" name="email" placeholder="Correo">
                     </label><br>
                     <input type="submit" class="fadeIn fourth" value="Registrar" >
+                    <div id="formFooter">
+                        <a class="underlineHover" href="login.jsp" title="Salir">Salir</a>
+                    </div>
                 </form>
-                <h3>${mensaje}</h3>
-            </div>
-            <div id="formFooter">
-                <a class="underlineHover" href="login.jsp" title="Salir">Salir</a>
             </div>
         </div>
         <script src="static/js/bootstrap.js"></script>

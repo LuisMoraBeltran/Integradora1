@@ -18,9 +18,9 @@
     <div class="wrapper fadeInDown">
     <div id="formContent">
         <h3>${mensaje}</h3>
-        <h1><i>Registro color</i></h1>
+        <h1><i>Registro color</i></h1><br>
         <form action="ServletColor" method="post" >
-            <label for="Nombre Color" id="texto" >Color: </label>
+            <label for="Nombre Color" > </label>
             <input type="text" id="color" class="fadeIn third" name="color" placeholder="Nombre del Color">
             <input type="submit" class="fadeIn fourth" value="Registrar">
         </form>

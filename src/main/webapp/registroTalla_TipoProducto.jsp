@@ -15,9 +15,15 @@
 <html>
     <head>
         <title>Registro Tallas Productos</title>
+        <link rel="stylesheet" href="static/css/bootstrap.css">
+        <link rel="stylesheet" href="static/css/login.css">
+        <link rel="stylesheet"  href="static/css/fondo.css">
     </head>
     <body>
+    <div class="wrapper fadeInDown">
+        <div id="formContent1">
         <h1>${mensaje}</h1>
+            <h1><i id="texto">Tipo y Talla</i></h1>
         <form action="ServletTallaTipoProducto" method="post">
 
             <%
@@ -48,6 +54,7 @@
         <div id="formFooter">
             <a class="underlineHover" href="ServletTallaTipoProducto" title="Lista Tipo producto-Talla">Lista Tipo producto-Talla</a>
         </div>
-
+        </div>
+    </div>
     </body>
 </html>
