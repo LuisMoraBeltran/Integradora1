@@ -7,6 +7,15 @@ public class Producto {
     private int unid;
     private float cost;
     private String marc;
+    private int clienteId;
+
+    public int getClienteId() {
+        return clienteId;
+    }
+
+    public void setClienteId(int clienteId) {
+        this.clienteId = clienteId;
+    }
 
     public Producto(){
 

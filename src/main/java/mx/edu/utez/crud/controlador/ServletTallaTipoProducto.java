@@ -5,7 +5,6 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 import mx.edu.utez.crud.dao.TallaTipoProductoDao;
-import mx.edu.utez.crud.dao.TipoProductoDao;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

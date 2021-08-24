@@ -14,7 +14,7 @@ public class ProductoDao {
     Logger logger = LoggerFactory.getLogger(ProductoDao.class);
 
     //Metodo para registrar en la tabla producto
-    public boolean guardarProducto(Producto product) {
+    public int guardarProducto(Producto product) {
         try (Connection con = ConexionMYSQL.getConnection()) {
             try (PreparedStatement pstm = con.prepareStatement("insert into producto(nombre,descripcion,unidad,costo,marca) values(?,?,?,?,?)")) {
                 pstm.setString(1, product.getNameProduct());
@@ -23,14 +23,21 @@ public class ProductoDao {
                 pstm.setFloat(4,product.getCost());
                 pstm.setString(5,product.getMarc());
 
-                return pstm.executeUpdate() == 1;
+                try (ResultSet rs = pstm.executeQuery()) {
+                    while (rs.next()) {
+                        return (rs.getInt("id_producto"));
+                    }
+
+                } catch (Exception e) {
+                    logger.error(e.getMessage());
+                }
             } catch (Exception e) {
                 logger.error(e.getMessage());
             }
         } catch (Exception e) {
             logger.error(e.getMessage());
         }
-        return false;
+        return 0;
     }
 
     //Metodo para consultar por un ID
@@ -47,7 +54,6 @@ public class ProductoDao {
                     producto.setUnid(rs.getInt("unidad"));
                     producto.setCost(rs.getFloat("costo"));
                     producto.setMarc(rs.getString("marca"));
-
                 }
 
             } catch (Exception e) {
@@ -85,20 +91,55 @@ public class ProductoDao {
         return status;
     }
 
-    public List<TipoProducto> consultarTiposDeProductos() {
-        List<TipoProducto> listaTipoProductos = new ArrayList<>();
+    public List<Producto> consultarTodosProductos() {
+        List<Producto> listaDeProductos = new ArrayList<>();
+
         try (
                 Connection con = ConexionMYSQL.getConnection();
                 Statement stm = con.createStatement();
-                ResultSet rs = stm.executeQuery("SELECT * FROM tipoProducto");) {
+                ResultSet rs = stm.executeQuery("SELECT * FROM producto WHERE id_producto");) {
             while (rs.next()) {
-                TipoProducto tipoProducto = new TipoProducto(rs.getInt("idtipoProducto"), rs.getString("tipo_producto"));
-                listaTipoProductos.add(tipoProducto);
+                Producto producto = new Producto();
+                producto.setId(rs.getInt("id_producto"));
+                producto.setNameProduct(rs.getString("nombre"));
+                producto.setDescrip(rs.getString("descripcion"));
+                producto.setUnid(rs.getInt("unidad"));
+                producto.setCost(rs.getFloat("costo"));
+                producto.setMarc(rs.getString("marca"));
+                producto.setClienteId(rs.getInt("cliente_id_cliente"));
+
+                listaDeProductos.add(producto);
             }
         } catch (Exception e) {
             logger.error(e.getMessage());
         }
-        return listaTipoProductos;
+        return listaDeProductos;
+
+    }
+
+    public List<Producto> consultarProductosPorCliente (int idCliente) {
+        List<Producto> listaDeProductos = new ArrayList<>();
+
+        try (
+                Connection con = ConexionMYSQL.getConnection();
+                Statement stm = con.createStatement();
+                ResultSet rs = stm.executeQuery("SELECT * FROM producto WHERE cliente_id_cliente" + idCliente);) {
+            while (rs.next()) {
+                Producto producto = new Producto();
+                producto.setId(rs.getInt("id_producto"));
+                producto.setNameProduct(rs.getString("nombre"));
+                producto.setDescrip(rs.getString("descripcion"));
+                producto.setUnid(rs.getInt("unidad"));
+                producto.setCost(rs.getFloat("costo"));
+                producto.setMarc(rs.getString("marca"));
+                producto.setClienteId(rs.getInt("cliente_id_cliente"));
+
+                listaDeProductos.add(producto);
+            }
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+        }
+        return listaDeProductos;
 
     }
 

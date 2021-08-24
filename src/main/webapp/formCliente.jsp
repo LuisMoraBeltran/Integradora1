@@ -22,14 +22,14 @@
            <form action="ServletCliente" method="post">
                <label for="name">
                    <div id="texto">Nombre(s):</div>
-                   <input type="text" id="name" class="fadeIn third" name="name" placeholder="Nombre">
+                   <input type="text" id="name" class="fadeIn third" name="nombre" placeholder="Nombre">
                </label><br>
                <label for="lastname"><div id="texto">Apellido Paterno:</div>
-                   <input type="text" id="lastname" class="fadeIn third" name="lastname" placeholder="Apellid. Paterno">
+                   <input type="text" id="lastname" class="fadeIn third" name="patern" placeholder="Apellid. Paterno">
                </label><br>
                <div id="texto">Apellido Materno:</div>
                <label for="secondlastname">
-                   <input type="text" id="secondlastname" class="fadeIn second" name="secondlastname"
+                   <input type="text" id="secondlastname" class="fadeIn second" name="matern"
                           placeholder="Apellid. Materno">
                </label><br>
                <label for="pass">
@@ -42,11 +42,11 @@
                </label><br>
                <label for="telf">
                    <div id="texto">Teléfono:</div>
-                   <input type="tel" id="telf" class="fadeIn third" name="telf" placeholder="Telefono">
+                   <input type="tel" id="telf" class="fadeIn third" name="telef" placeholder="Telefono">
                </label><br>
                <label for="dir">
                    <div id="texto">Dirección:</div>
-                   <input type="text" id="dir" class="fadeIn third" name="dir" placeholder="Dirección">
+                   <input type="text" id="dir" class="fadeIn third" name="direc" placeholder="Dirección">
                </label><br>
                <input type="submit" class="fadeIn fourth" value="Registrar">
            </form>

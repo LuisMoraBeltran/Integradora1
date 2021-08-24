@@ -31,7 +31,7 @@ public class ServletLoginCliente extends HttpServlet {
                 if (null != cliente) {
                     sesionLogin.setAttribute("email", cliente.getCorreo());
                     sesionLogin.setAttribute("pass",cliente.getPass());
-                    sesionLogin.setAttribute("id",cliente.getId());
+                    sesionLogin.setAttribute("idCliente",cliente.getId());
                     logger.info("Login exitoso");
                     request.setAttribute("mensaje", "Bienvenido al Sistema");
                     request.setAttribute("ListaClientes", clienteDao.consultarClientes());
@@ -61,7 +61,7 @@ public class ServletLoginCliente extends HttpServlet {
         mensaje="Gracias por utilizar el sistema, Bye!";
         sessionLogin.removeAttribute("correo");
         sessionLogin.removeAttribute("pass");
-        sessionLogin.removeAttribute("id");
+        sessionLogin.removeAttribute("idCliente");
         sessionLogin.invalidate();
         dispatcher=request.getRequestDispatcher("loginCliente.jsp");
         request.setAttribute("mensaje",mensaje);

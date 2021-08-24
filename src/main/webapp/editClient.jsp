@@ -35,11 +35,6 @@
             </label>
             <button type="submit" value="Actualizar">Actualizar</button>
 
-            <h3>Contraseña: <%=client.getPass()%></h3>
-            <h3>Correo: <%=client.getCorreo()%></h3>
-            <h3>Telefono: <%=client.getTelefono()%></h3>
-            <h3>Direccion: <%=client.getDireccion()%></h3>
-
         </form>
 
     </body>
