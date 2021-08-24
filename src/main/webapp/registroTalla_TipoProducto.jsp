@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="static/css/login.css">
         <link rel="stylesheet"  href="static/css/fondo.css">
     </head>
-    <body>
+    <body id="fondo">
     <div class="wrapper fadeInDown">
         <div id="formContent1">
         <h1>${mensaje}</h1>
@@ -30,7 +30,7 @@
                     List<TipoProducto> listaTipoProductos = new TipoProductoDao().consultarTiposDeProductos();
                     List<Talla> listaTallas = new TallaDao().consultarTallas();
             %>
-            <label>Tipo de Producto:</label>
+            <label id="texto">Tipo de Producto:</label>
             <label>
                 <select name="tipoProducto">
                     <option>Seleccione Tipo de producto</option>
@@ -40,7 +40,7 @@
                 </select>
             </label>
 
-            <label>Talla: </label>
+            <label id="texto">Talla: </label>
             <label>
                 <select name="tallaProducto">
                     <option>Seleccione Talla</option>
@@ -54,6 +54,9 @@
         <div id="formFooter">
             <a class="underlineHover" href="ServletTallaTipoProducto" title="Lista Tipo producto-Talla">Lista Tipo producto-Talla</a>
         </div>
+            <div id="formFooter">
+                <a class="underlineHover" href="menuPrincipal.jsp" title="Salir">Salir</a>
+            </div>
         </div>
     </div>
     </body>

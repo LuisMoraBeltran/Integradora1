@@ -10,7 +10,7 @@
     <head>
         <title>Modificar Cliente</title>
     </head>
-    <body>
+    <body id="fondo">
         <h1>Modificar el cliente: </h1>
         <%Cliente client = (Cliente) request.getAttribute("client");%>
         <form action="ServletCliente" method="post" >

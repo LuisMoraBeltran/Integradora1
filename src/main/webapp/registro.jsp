@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="static/css/login.css">
         <link rel="stylesheet"  href="static/css/fondo.css">
     </head>
-    <body>
+    <body id="fondo">
         <div class="wrapper fadeInDown">
             <div id="formContent1">
                 <h1><i>Inicio de sesión</i></h1>

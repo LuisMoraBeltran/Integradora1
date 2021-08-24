@@ -11,7 +11,7 @@
 <head>
     <title>Listado de Clientes</title>
 </head>
-<body>
+<body id="fondo">
 <h1>${mensaje}</h1>
 
 <table>

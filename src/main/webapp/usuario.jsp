@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="static/css/usuario.css">
 
     </head>
-    <body>
+    <body id="fondo">
         <h1>Modificar el usuario: </h1>
         <%Usuario user = (Usuario)request.getAttribute("user");%>
         <form action="ServletAcciones" method="post" enctype="multipart/form-data">

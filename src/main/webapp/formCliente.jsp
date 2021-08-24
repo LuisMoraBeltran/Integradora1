@@ -15,7 +15,7 @@
        <link rel="stylesheet" href="static/css/fondo.css">
        <link rel="stylesheet" href="static/css/login.css">
 </head>
-   <body>
+   <body id="fondo">
    <h1>${mensaje}</h1>
    <div class="wrapper fadeInDown">
        <div id="formContent">

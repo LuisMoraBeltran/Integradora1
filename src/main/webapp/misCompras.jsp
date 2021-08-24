@@ -10,7 +10,7 @@
 <head>
     <title>Mis Compras</title>
 </head>
-<body>
+<body id="fondo">
 
 </body>
 </html>

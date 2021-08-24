@@ -10,7 +10,7 @@
 <head>
     <title>Mi cuenta</title>
 </head>
-<body>
+<body id="fondo">
 <h3><a href="editClient.jsp"> Editar Información </a></h3>
 <h3><a href="registroProduct.jsp">Resgistrar Producto</a></h3>
 <h3><a href="misCompras.jsp">Mis Compras</a></h3>

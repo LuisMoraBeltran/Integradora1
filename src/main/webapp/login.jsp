@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="static/css/bootstrap.css">
         <link rel="stylesheet" href="static/css/login.css">
     </head>
-    <body>
+    <body id="fondo">
         
         <div class="wrapper fadeInDown">
             <div id="formContent">

@@ -22,7 +22,7 @@
         <link rel="stylesheet" href="static/css/login.css">
         <link rel="stylesheet" type="text/css" href="static/css/fondo.css">
     </head>
-    <body>
+    <body id="fondo">
     <div id="formContent">
         <form action="ServletCliente" method="post">
 

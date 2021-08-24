@@ -19,7 +19,7 @@
 <head>
     <title>Registro de Producto</title>
 </head>
-<body>
+<body id="fondo">
 
 <%
     List<Color> listaColores = new ColorDao().consultarColores();
