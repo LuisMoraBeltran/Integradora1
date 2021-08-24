@@ -10,6 +10,9 @@
 <html>
 <head>
     <title>Listado de Clientes</title>
+    <link rel="stylesheet" type="text/css" href="static/css/fondo.css">
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <link rel="stylesheet" href="static/css/login.css">
 </head>
 <body id="fondo">
 <h1>${mensaje}</h1>

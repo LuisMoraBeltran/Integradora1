@@ -13,6 +13,7 @@
         <title>Lista de Tallas</title>
         <link rel="stylesheet" href="static/css/bootstrap.css">
         <link rel="stylesheet" href="static/css/login.css">
+        <link rel="stylesheet" type="text/css" href="static/css/fondo.css">
     </head>
     <body id="fondo">
         <h1>${mensaje}</h1>
