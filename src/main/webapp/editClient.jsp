@@ -19,7 +19,7 @@
             <input type="hidden" name="id" value="${client.id}">
             <h4>Correo: </h4>
             <label>
-                <input type="email" name="email" value="${client.email}">
+                <input type="email" name="email" value="${client.correo}">
             </label>
             <h4>Telefono: </h4>
             <label>
@@ -34,11 +34,6 @@
                 <input type="password" name="pass" value="${client.pass}">
             </label>
             <button type="submit" value="Actualizar">Actualizar</button>
-
-            <h3>Contraseña: <%=client.getPass()%></h3>
-            <h3>Correo: <%=client.getCorreo()%></h3>
-            <h3>Telefono: <%=client.getTelefono()%></h3>
-            <h3>Direccion: <%=client.getDireccion()%></h3>
 
         </form>
 

@@ -85,7 +85,7 @@ public class ServletCliente extends HttpServlet {
                 } else {
                     logger.error("Error al registrar datos");
                     request.setAttribute("mensaje", "Error al registrar!");
-                    request.getRequestDispatcher("editClient.jsp").forward(request, response);
+                    request.getRequestDispatcher("formClient.jsp").forward(request, response);
                 }
             } else {
                 logger.error("Error los datos ya existen");

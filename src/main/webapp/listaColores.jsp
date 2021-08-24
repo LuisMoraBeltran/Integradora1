@@ -9,39 +9,40 @@
 <%@taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 
 <html>
-    <head>
-        <title>Lista de Colores</title>
-        <link rel="stylesheet" href="static/css/bootstrap.css">
-        <link rel="stylesheet" href="static/css/login.css">
-    </head>
+<head>
+    <title>Lista de Tallas</title>
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <link rel="stylesheet" href="static/css/login.css">
+</head>
     <body>
-        <h1>${mensaje}</h1>
+    <h1>${mensaje}</h1>
 
-        <table>
+    <table>
+        <tr>
+            <th>No.</th>
+            <th>Color</th>
+            <th>Acciones</th>
+        </tr>
+        <c:forEach items="${ListaColores}" var="color" varStatus="status">
+
             <tr>
-                <th>No.</th>
-                <th>Color</th>
-                <th>Acciones</th>
+                <td>${status.count}</td>
+                <td>${color.name}</td>
+                <td>
+                    <form action="ServletColor" method="PUT">
+                        <button type="submit" name="accion" value="Eliminar">Eliminar</button>
+                        <input type="hidden" name="id" value="${color.id}">
+                    </form>
+                </td>
             </tr>
-            <c:forEach items="${ListaColores}" var="color" varStatus="status">
-
-                <tr>
-                    <td>${status.count}</td>
-                    <td>${color.name}</td>
-                    <td>
-                        <form action="ServletColor" method="PUT">
-                            <button type="submit" name="accion" value="Eliminar">Eliminar</button>
-                            <input type="hidden" name="id" value="${color.id}">
-                        </form>
-                    </td>
-                </tr>
-            </c:forEach>
+        </c:forEach>
 
 
-        </table>
-        <div id="formFooter">
-            <a class="underlineHover" href="menuPrincipal.jsp" title="Salir">Menu Principal</a>
-        </div>
-        <script src="static/js/bootstrap.js"></script>
-    </body>
+    </table>
+    <div id="formFooter">
+        <a class="underlineHover" href="menuPrincipal.jsp" title="Menu Principal">Menu Principal</a>
+        <a class="underlineHover" href="registroColor.jsp" title="Resgistro Colores">Resgistro Colores</a>
+    </div>
+    <script src="static/js/bootstrap.js"></script>
+</body>
 </html>

@@ -14,46 +14,40 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 <html>
     <head>
-        <title>Registro Tallas</title>
-        <link rel="stylesheet" href="static/css/bootstrap.css">
-        <link rel="stylesheet" href="static/css/login.css">
-        <link rel="stylesheet" type="text/css" href="static/css/fondo.css">
+        <title>Registro Tallas Productos</title>
     </head>
     <body>
-    <div class="wrapper fadeInDown">
-    <div id="formContent">
         <h1>${mensaje}</h1>
-        <h1><i>Registro de Conjunto</i></h1>
         <form action="ServletTallaTipoProducto" method="post">
 
             <%
                     List<TipoProducto> listaTipoProductos = new TipoProductoDao().consultarTiposDeProductos();
                     List<Talla> listaTallas = new TallaDao().consultarTallas();
             %>
-            <label id="texto">Tipo de Producto:</label>
-            <select name="tipoProducto">
-                <option>Seleccione Tipo de producto</option>
-                <% for (TipoProducto tipoProducto : listaTipoProductos) {%>
-                <option value="<%=tipoProducto.getId() %>"><%=tipoProducto.getName() %></option>
-                <%}%>
-            </select>
+            <label>Tipo de Producto:</label>
+            <label>
+                <select name="tipoProducto">
+                    <option>Seleccione Tipo de producto</option>
+                    <% for (TipoProducto tipoProducto : listaTipoProductos) {%>
+                    <option value="<%=tipoProducto.getId() %>"><%=tipoProducto.getName() %></option>
+                    <%}%>
+                </select>
+            </label>
 
-            <label id="texto">Talla: </label>
-            <select name="tallaProducto">
-                <option>Seleccione Talla</option>
-                <% for (Talla talla : listaTallas) {%>
-                <option value="<%=talla.getId() %>" ><%=talla.getName() %></option>
-                <%}%>
-            </select>
+            <label>Talla: </label>
+            <label>
+                <select name="tallaProducto">
+                    <option>Seleccione Talla</option>
+                    <% for (Talla talla : listaTallas) {%>
+                    <option value="<%=talla.getId() %>" ><%=talla.getName() %></option>
+                    <%}%>
+                </select>
+            </label>
             <input type="submit" class="fadeIn fourth" value="Registrar">
         </form>
         <div id="formFooter">
             <a class="underlineHover" href="ServletTallaTipoProducto" title="Lista Tipo producto-Talla">Lista Tipo producto-Talla</a>
         </div>
-        <div id="formFooter">
-            <a class="underlineHover" href="menuPrincipal.jsp" title="Menu Principal">Atras</a>
-        </div>
-    </div></div>
 
     </body>
 </html>
