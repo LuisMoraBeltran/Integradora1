@@ -39,7 +39,7 @@ public class ColorTipoProdcutoDao {
                         + "INNER JOIN color ON id_color = color_id_color "
                         + "INNER JOIN tipoProducto ON idtipoProducto = tipoProducto_idtipoProducto")) {
             while (rs.next()) {
-                ColorTipoProducto ttp = new ColorTipoProducto(rs.getInt("id_color"), rs.getString("color"), rs.getInt("idtipoProducto"), rs.getString("tipo_producto"));
+                ColorTipoProducto ttp = new ColorTipoProducto(rs.getInt("id_color"), rs.getString("color"), rs.getInt("idTipoProducto"), rs.getString("tipo_producto"));
                 listaRelacion.add(ttp);
             }
         } catch (Exception e) {

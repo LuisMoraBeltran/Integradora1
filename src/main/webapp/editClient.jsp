@@ -19,7 +19,7 @@
             <input type="hidden" name="id" value="${client.id}">
             <h4>Correo: </h4>
             <label>
-                <input type="email" name="email" value="${client.email}">
+                <input type="email" name="email" value="${client.correo}">
             </label>
             <h4>Telefono: </h4>
             <label>

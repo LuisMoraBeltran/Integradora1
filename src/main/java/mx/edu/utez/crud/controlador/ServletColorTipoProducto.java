@@ -3,7 +3,6 @@ package mx.edu.utez.crud.controlador;
 import mx.edu.utez.crud.dao.ColorTipoProdcutoDao;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
@@ -49,7 +48,7 @@ public class ServletColorTipoProducto extends HttpServlet {
         } else {
             logger.error("Error al registrar relacion entre color y tipo de producto");
             request.setAttribute("mensaje", "Error al registrar relacion entre color y tipo de producto");
-            request.getRequestDispatcher("registrocolor_tipoProducto.jsp").forward(request, response);
+            request.getRequestDispatcher("registroColor_tipoProducto.jsp").forward(request, response);
         }
     }
 }
