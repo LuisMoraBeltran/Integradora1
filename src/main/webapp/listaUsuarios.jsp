@@ -37,7 +37,7 @@
                     <td>${user.lastname}</td>
                     <td>${user.email}</td>
                     <td>
-                        <form action="ServletUsuario" method="PUT">
+                        <form action="ServletUsuario">
                             <button type="submit" value="Modificar">Modificar</button>
                             <button type="submit" name="accion" value="Eliminar">Eliminar</button>
                             <input type="hidden" name="id" value="${user.id}">
