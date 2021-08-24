@@ -15,8 +15,10 @@
         <link rel="stylesheet" type="text/css" href="static/css/fondo.css">
     </head>
     <body>
+    <div class="wrapper fadeInDown">
     <div id="formContent">
         <h3>${mensaje}</h3>
+        <h1><i>Registro de tallas</i></h1>
         <form action="ServletTalla" method="post">
             <label for="Talla" id="texto">Talla: </label>
             <input type="text" id="talla" class="fadeIn third" name="talla" placeholder="Talla CH|M|G o 13|15|17 o 28|30|32">
@@ -26,8 +28,8 @@
             <a class="underlineHover" href="ServletTalla" title="Lista Tallas">Lista Tallas</a>
         </div>
             <div id="formFooter">
-            <a class="underlineHover" href="menuPrincipal.jsp" title="Menu Principal">Menu Principal</a>
+            <a class="underlineHover" href="menuPrincipal.jsp" title="Menu Principal">Atras</a>
         </div>
-    </div>
+    </div></div>
     </body>
 </html>

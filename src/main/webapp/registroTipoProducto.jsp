@@ -15,8 +15,10 @@
         <link rel="stylesheet" type="text/css" href="static/css/fondo.css">
     </head>
     <body>
+    <div class="wrapper fadeInDown">
     <div id="formContent">
         <h3>${mensaje}</h3>
+        <h1><i>Registro de tipos de producto</i></h1>
         <form action="ServletTipoProducto" method="post">
             <label for="Tipo Producto">Tipo de Producto: </label>
             <input type="text" id="tipoProducto" class="fadeIn third" name="tipoProducto" placeholder="Playera|Pantalon|Ect...">
@@ -25,6 +27,9 @@
         <div id="formFooter">
             <a class="underlineHover" href="ServletTipoProducto" title="Lista de Tipos de Productos">Lista Tipos de Productos</a>
         </div>
-    </div>
+        <div id="formFooter">
+            <a class="underlineHover" href="menuPrincipal.jsp" title="Menu Principal">Atras</a>
+        </div>
+    </div></div>
     </body>
 </html>

@@ -10,7 +10,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>Fashion.com</title>
+    <link rel="icon" type="image/jpg" href="imagen/logo.jpg">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Fashion.com</title>
@@ -50,7 +51,7 @@
     </div>
     <div id="pie">
 <ul class="nav">
-    <li> class="" </li>
+
     <li class="nav-item">
         <a class="nav-link active" href="pantallaInicio.jsp">Inicio</a>
     </li>
@@ -173,7 +174,7 @@
 <br><br><br>
 </section>
 <section id="pie">
-    <p class="text-center">Condiciones de uso | Aviso de privacidad | © 1996-2021, Fashin.com, Inc. o afiliados. Todos los derechos reservados.</p>
+    <p class="text-center">Condiciones de uso | Aviso de privacidad | © 1996-2021, Fashion.com, Inc. o afiliados. Todos los derechos reservados.</p>
 </section>
 <script src="static/js/bootstrap.js"></script>
 </body>

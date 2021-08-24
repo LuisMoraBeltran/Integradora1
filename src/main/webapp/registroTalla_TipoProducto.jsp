@@ -20,8 +20,10 @@
         <link rel="stylesheet" type="text/css" href="static/css/fondo.css">
     </head>
     <body>
+    <div class="wrapper fadeInDown">
     <div id="formContent">
         <h1>${mensaje}</h1>
+        <h1><i>Registro de Conjunto</i></h1>
         <form action="ServletTallaTipoProducto" method="post">
 
             <%
@@ -48,7 +50,10 @@
         <div id="formFooter">
             <a class="underlineHover" href="ServletTallaTipoProducto" title="Lista Tipo producto-Talla">Lista Tipo producto-Talla</a>
         </div>
-    </div>
+        <div id="formFooter">
+            <a class="underlineHover" href="menuPrincipal.jsp" title="Menu Principal">Atras</a>
+        </div>
+    </div></div>
 
     </body>
 </html>

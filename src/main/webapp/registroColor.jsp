@@ -15,8 +15,10 @@
         <link rel="stylesheet" type="text/css" href="static/css/fondo.css">
     </head>
     <body>
+    <div class="wrapper fadeInDown">
     <div id="formContent">
         <h3>${mensaje}</h3>
+        <h1><i>Registro color</i></h1>
         <form action="ServletColor" method="post" >
             <label for="Nombre Color" id="texto" >Color: </label>
             <input type="text" id="color" class="fadeIn third" name="color" placeholder="Nombre del Color">
@@ -25,6 +27,9 @@
         <div id="formFooter">
             <a class="underlineHover" href="ServletColor" title="Lista Colores">Lista Colores</a>
         </div>
-    </div>
+        <div id="formFooter">
+            <a class="underlineHover" href="menuPrincipal.jsp" title="Menu Principal">Atras</a>
+        </div>
+    </div></div>
     </body>
 </html>
