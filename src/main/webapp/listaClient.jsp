@@ -5,11 +5,13 @@
   Time: 07:44 p. m.
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="" %>
 <%@taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Listado de Clientes</title>
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <link rel="stylesheet" href="static/css/login.css">
 </head>
 <body>
 <h1>${mensaje}</h1>
@@ -26,6 +28,7 @@
         <th>Contraseña</th>
         <th>Acciones</th>
     </tr>
+    <%--@elvariable id="ListaClientes" type="java.util.List"--%>
     <c:forEach items="${ListaClientes}" var="client" varStatus="status">
         <tr>
             <td>${status.count}</td>
@@ -38,7 +41,7 @@
             <td>${client.pass}</td>
             <td>
 
-                <form action="ServletCliente" method="PUT">
+                <form action="ServletCliente" >
                     <button type="submit" value="Modificar">Modificar</button>
                     <button type="submit" name="accion" value="Eliminar">Eliminar</button>
                     <input type="hidden" name="id" value="${client.id}">
