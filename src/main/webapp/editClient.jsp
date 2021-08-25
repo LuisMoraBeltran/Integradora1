@@ -9,6 +9,9 @@
 <html>
     <head>
         <title>Modificar Cliente</title>
+        <link rel="icon" type="image/jpg" href="imagen/logo.jpg">
+        <link rel="stylesheet" type="text/css" href="static/css/fondo.css">
+        <link rel="stylesheet" href="static/css/bootstrap.css">
     </head>
     <body id="fondo">
         <h1>Modificar el cliente: </h1>

@@ -12,6 +12,7 @@
 <html>
     <head>
         <title>Modificacion Usuario</title>
+        <link rel="icon" type="image/jpg" href="imagen/logo.jpg">
         <link rel="stylesheet" href="static/css/usuario.css">
 
     </head>

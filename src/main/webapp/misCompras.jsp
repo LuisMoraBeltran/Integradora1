@@ -9,6 +9,7 @@
 <html>
 <head>
     <title>Mis Compras</title>
+    <link rel="icon" type="image/jpg" href="imagen/logo.jpg">
 </head>
 <body id="fondo">
 

@@ -10,13 +10,18 @@
 <html>
    <head>
     <title>Registro Cliente</title>
-    <link rel="stylesheet" href="static/css/formClient.css">
-    <link rel="stylesheet" href="static/css/bootstrap.css">
+       <link rel="icon" type="image/jpg" href="imagen/logo.jpg">
+       <link rel="stylesheet" href="static/css/formClient.css">
+       <link rel="stylesheet" href="static/css/bootstrap.css">
        <link rel="stylesheet" href="static/css/fondo.css">
        <link rel="stylesheet" href="static/css/login.css">
+
 </head>
    <body id="fondo">
    <h1>${mensaje}</h1>
+
+   <div align="center"><img src="imagen/logo.jpg" id="im" class="fadeInDown"></div>
+
    <div class="wrapper fadeInDown">
        <div id="formContent">
            <h1><i>Inicio de sesión</i></h1>
@@ -44,7 +49,7 @@
                </label><br>
                <label for="telf">
                    <div id="texto">Teléfono:</div>
-                   <input type="number" id="telf" class="fadeIn third" name="telef" placeholder="Telefono">
+                   <input type="number" id="telf" class="fadeIn third" name="telef" placeholder="Teléfono">
                </label><br>
                <label for="dir">
                    <div id="texto">Dirección:</div>
@@ -52,7 +57,7 @@
                </label><br>
                <input type="submit" class="fadeIn fourth" value="Registrar">
                <div id="formFooter">
-                   <a class="underlineHover" href="pantallaInicio.jsp">Iniciar sin Usuario</a>
+                   <a class="underlineHover" href="pantallaInicio.jsp">Iniciar sin usuario</a>
                </div>
            </form>
        </div>

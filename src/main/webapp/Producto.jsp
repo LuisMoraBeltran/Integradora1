@@ -18,6 +18,7 @@
 <html>
 <head>
     <title>Registro de Producto</title>
+    <link rel="icon" type="image/jpg" href="imagen/logo.jpg">
 </head>
 <body id="fondo">
 

@@ -9,6 +9,7 @@
 <html>
 <head>
     <title>Lista Productos</title>
+    <link rel="icon" type="image/jpg" href="imagen/logo.jpg">
     <link rel="stylesheet" href="static/css/bootstrap.css">
     <link rel="stylesheet" href="static/css/login.css">
     <link rel="stylesheet" type="text/css" href="static/css/fondo.css">

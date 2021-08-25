@@ -32,10 +32,10 @@
                 <h2>${mensaje}</h2>
                 <!-- Remind Password -->
                 <div id="formFooter">
-                    <a class="underlineHover" href="registro.jsp">Registrate</a>
+                    <a class="underlineHover" href="registro.jsp">Regístrate</a>
                 </div>
                 <div id="formFooter">
-                    <a class="underlineHover" href="pantallaInicio.jsp">Iniciar sin Usuario</a>
+                    <a class="underlineHover" href="pantallaInicio.jsp">Iniciar sin usuario</a>
                 </div>
             </div>
         </div>

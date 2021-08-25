@@ -14,8 +14,7 @@
     <link rel="icon" type="image/jpg" href="imagen/logo.jpg">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Fashion.com</title>
-    <link rel="stylesheet" type="text/css" href="static/css/fondo.css">
+    <link rel="stylesheet" href="static/css/fondo.css">
     <link rel="stylesheet" href="static/css/bootstrap.css">
     <link rel="stylesheet" href="static/css/normalize.css">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -49,38 +48,38 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <div id="pie">
-<ul class="nav">
+    <div id="fondo2">
+<ul class="nav" >
 
     <li class="nav-item">
-        <a class="nav-link active" href="pantallaInicio.jsp">Inicio</a>
+        <a class="nav-link active" href="pantallaInicio.jsp" id="texto">Inicio</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="pantallaInicio.jsp">Tendencias</a>
+        <a class="nav-link" href="pantallaInicio.jsp" id="texto">Tendencias</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="pantallaInicio.jsp">Ofertas</a>
+        <a class="nav-link" href="pantallaInicio.jsp"id="texto">Ofertas</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="pantallaInicio.jsp">Primavera</a>
+        <a class="nav-link" href="pantallaInicio.jsp"id="texto">Primavera</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="pantallaInicio.jsp">Otoño</a>
+        <a class="nav-link" href="pantallaInicio.jsp"id="texto">Otoño</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="pantallaInicio.jsp">Invierno</a>
+        <a class="nav-link" href="pantallaInicio.jsp"id="texto">Invierno</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="pantallaInicio.jsp">Verano</a>
+        <a class="nav-link" href="pantallaInicio.jsp"id="texto">Verano</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="formCliente.jsp">Iniciar sesión</a>
+        <a class="nav-link" href="formCliente.jsp"id="texto">Iniciar sesión</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="login.jsp">  </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link disabled" href="login.jsp" tabindex="-1" aria-disabled="true" >Carrito</a>
+        <a class="nav-link disabled" href="login.jsp" tabindex="-1" aria-disabled="true">Carrito</a>
     </li>
 
 </ul>
@@ -93,7 +92,7 @@
     <div class="card" style="width: 18rem;">
         <img src="imagen/ropa1.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-            <h5 class="card-title">Conjunto</h5>
+            <h5 class="card-title">Jumper</h5>
             <p class="card-text"> Mezclilla </p>
             <a href="#" class="btn btn-primary">Comprar</a>
             <a href="#" class="btn btn-primary">Añadir al carrito</a>
@@ -102,8 +101,8 @@
     <div class="card" style="width: 18rem;">
         <img src="imagen/ropa4.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-            <h5 class="card-title">Pantalon</h5>
-            <p class="card-text"> Mezclilla </p>
+            <h5 class="card-title">Vestido</h5>
+            <p class="card-text"> triangulo </p>
             <a href="#" class="btn btn-primary">Comprar</a>
             <a href="#" class="btn btn-primary">Añadir al carrito</a>
         </div></div></div>
@@ -111,8 +110,8 @@
     <div class="card" style="width: 18rem;">
         <img src="imagen/ropa3.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-            <h5 class="card-title">titulo</h5>
-            <p class="card-text"> descripcion </p>
+            <h5 class="card-title">Playera</h5>
+            <p class="card-text"> lisa</p>
             <a href="#" class="btn btn-primary">Comprar</a>
             <a href="#" class="btn btn-primary">Añadir al carrito</a>
         </div></div></div>
@@ -173,7 +172,7 @@
 </div>
 <br><br><br>
 </section>
-<section id="pie">
+<section id="fondo2">
     <p class="text-center">Condiciones de uso | Aviso de privacidad | © 1996-2021, Fashion.com, Inc. o afiliados. Todos los derechos reservados.</p>
 </section>
 <script src="static/js/bootstrap.js"></script>

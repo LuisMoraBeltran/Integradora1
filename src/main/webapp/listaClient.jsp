@@ -10,8 +10,12 @@
 <html>
 <head>
     <title>Listado de Clientes</title>
+    <link rel="icon" type="image/jpg" href="imagen/logo.jpg">
+    <link rel="stylesheet"  href="static/css/fondo.css">
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <link rel="stylesheet" href="static/css/login.css">
 </head>
-<body>
+<body id="fondo">
 <h1>${mensaje}</h1>
 
 <table>
@@ -52,6 +56,7 @@
 <div id="formFooter">
     <a class="underlineHover" href="menuPrincipal.jsp" title="Salir">Salir</a>
 </div>
+
 <script src="static/js/bootstrap.js"></script>
 </body>
 </html>

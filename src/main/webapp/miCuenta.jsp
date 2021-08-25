@@ -9,6 +9,7 @@
 <html>
 <head>
     <title>Mi cuenta</title>
+    <link rel="icon" type="image/jpg" href="imagen/logo.jpg">
 </head>
 <body id="fondo">
 <h3><a href="editClient.jsp"> Editar Información </a></h3>

@@ -9,7 +9,7 @@ and open the template in the editor.
 /* BASIC */
 html {
   /* Color de transicion entre pantalla principal y login  */
-  background-color: #a1d0e3;
+
 }
 body {
   font-family: "Poppins", sans-serif;
@@ -17,7 +17,7 @@ body {
 
 }
 a {
-  color: #92badd;
+  color: #5b2b3d;
   display:inline-block;
   text-decoration: none;
   font-weight: 400;
@@ -49,7 +49,7 @@ h2 {
 #formContent {
   -webkit-border-radius: 10px 10px 10px 10px;
   border-radius: 10px 10px 10px 10px;
-  background: #001050;
+  background: #f07a77;
   padding: 30px;
   width: 90%;
   max-width: 450px;
@@ -58,61 +58,38 @@ h2 {
   box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
   text-align: center;
 }
-#formContent1 {
-  -webkit-border-radius: 10px 10px 10px 10px;
-  border-radius: 10px 10px 10px 10px;
-  background: #001050;
-  padding: 30px;
-  width: 90%;
-  max-width: 450px;
-  position: relative;
-  -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
-  box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
-  text-align: center;
-}
 
 #formFooter {
-  background-color: #dadada;
-  border-top: 1px solid #001050;
+  background-color: #ffb7a2;
+  border-bottom-color: #000;
   padding: 25px;
   text-align: center;
   -webkit-border-radius: 0 0 10px 10px;
   border-radius: 10px 10px 10px 10px;
 }
 
-#formFooter1 {
-  background-color: #fd8b00;
-  border-top: 1px solid #dce8f1;
-  padding: 25px;
-  text-align: center;
-  -webkit-border-radius: 0 0 10px 10px;
-  border-radius: 0 0 0 0;
-}
 #formFooter2 {
   background-color: #8f8989;
-  border-top: 1px solid #dce8f1;
+  border-bottom-color: #000;
   padding: 25px;
   text-align: center;
   -webkit-border-radius: 0 0 10px 10px;
   border-radius: 0 0 0 0;
 }
 /* TABS */
-
 h2.inactive {
   color: #cccccc;
 }
-
 h2.active {
   color: #0d0d0d;
-  border-bottom: 2px solid #5fbae9;
+  border-bottom: 2px solid #39ace7;
 }
 
 
-
 /* FORM TYPOGRAPHY*/
-
+/*boton de registro sin mause*/
 input[type=button], input[type=submit], input[type=reset]  {
-  background-color: #56baed;
+  background-color: #ffb7a2;
   border: none;
   color: #ffff;
   padding: 15px 80px;
@@ -132,9 +109,11 @@ input[type=button], input[type=submit], input[type=reset]  {
   transition: all 0.3s ease-in-out;
 }
 
-input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
-  background-color: #39ace7;
+/*Boton registrar o iniciar secion cambia de color maus ensima*/
+  input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
+  background-color: #ac545b;
 }
+
 
 input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
   -moz-transform: scale(0.95);
@@ -143,9 +122,9 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active  
   -ms-transform: scale(0.95);
   transform: scale(0.95);
 }
-
+/*fondo del cuadro de texto*/
 input[type=text], input[type=password], input[type=email], input[type=number]{
-  background-color: #f6f6f6;
+  background-color: #eae8e8;
   color: #0d0d0d;
   padding: 15px 32px;
   text-align: center;
@@ -163,15 +142,15 @@ input[type=text], input[type=password], input[type=email], input[type=number]{
   border-radius: 5px 5px 5px 5px;
 }
 
-
-input[type=text]:focus , input[type=password]:focus, input[type=email]:focus, input[type=number]:focus {
-  background-color: #fff;
-  border-bottom: 2px solid #5fbae9;
+/*casillas de texto cuando seleccionas*/
+  input[type=text]:focus,input[type=password]:focus,input[type=email]:focus,input[type=number]:focus {
+  background-color: #5b2b3d;
+  border-bottom: 2px solid #f9c291;
 }
 
-input[type=text]::placeholder , input[type=password]::placeholder,
-input[type=email]::placeholder, input[type=number]::placeholder{
-  color: #cccccc;
+  /* color del texto de los recuadros de texto*/
+  input[type=text]::placeholder , input[type=password]::placeholder,input[type=email]::placeholder, input[type=number]::placeholder{
+  color: #bbbbbb;
 }
 
 
@@ -259,33 +238,28 @@ input[type=email]::placeholder, input[type=number]::placeholder{
 }
 
 /* Simple CSS3 Fade-in Animation */
+/*linea debajo de los botones footeer*/
 .underlineHover:after {
   display: block;
   left: 0;
   bottom: -10px;
   width: 0;
   height: 2px;
-  background-color: #56baed;
+  background-color: #5b2b3d;
   content: "";
-  transition: width 0.2s;
+  transition: width 1.0s;
 }
 
 .underlineHover:hover {
   color: #0d0d0d;
 }
-
 .underlineHover:hover:after{
   width: 100%;
 }
-
-
-
 /* OTHERS */
-
 *:focus {
     outline: none;
-} 
-
+}
 #icon {
   width:60%;
 }
