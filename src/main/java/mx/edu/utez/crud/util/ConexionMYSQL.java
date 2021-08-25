@@ -9,7 +9,7 @@ import java.sql.SQLException;
 public class ConexionMYSQL {
     public static Connection getConnection() throws SQLException{
         DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
-        return DriverManager.getConnection("jdbc:mysql://localhost:3306/crudUsuarios","root","541219066");
+        return DriverManager.getConnection("jdbc:mysql://hgs-practica.cnkaxfc39kyo.us-east-1.rds.amazonaws.com:3306/crudusuarios","admin","541219066");
     }
 
     public static void main(String[] args) {

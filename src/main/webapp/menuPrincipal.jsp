@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="static/css/login.css">
 </head>
 <body id="fondo">
-<h1 id="fondo2">Menú principal</h1>
+<h1 id="fondo2">Menú principal</h1><br><br>
 <div class="list-group" >
     <a href="registro.jsp" class="list-group-item list-group-item-action " aria-current="true">
         <div class="d-flex w-100 justify-content-between">
@@ -80,14 +80,7 @@
         <p class="mb-1">Está ingresando al registro de productos y talla</p>
     </a>
 </div>
-<div class="list-group">
-    <a href="listaTiposProductos_Tallas.jsp" class="list-group-item list-group-item-action " aria-current="true">
-        <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">°  Registro Tipo Producto-Talla</h5>
-        </div>
-        <p class="mb-1">Esta ingresando a la Lista de Productos y tallas</p>
-    </a>
-</div>
+
 
 
 <br><br><br>

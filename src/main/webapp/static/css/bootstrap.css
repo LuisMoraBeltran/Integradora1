@@ -4830,11 +4830,11 @@ textarea.form-control-lg {
     z-index: 1;
     color: #495057;
     text-decoration: none;
-    background-color: #f8f9fa;
+    background-color: #ffb7a2;
 }
 .list-group-item-action:active {
     color: #212529;
-    background-color: #e9ecef;
+    background-color: #f07a77;
 }
 
 .list-group-item {
@@ -4843,7 +4843,7 @@ textarea.form-control-lg {
     padding: 0.5rem 1rem;
     color: #212529;
     text-decoration: none;
-    background-color: #fff;
+    background-color: #ffb7a2;
     border: 1px solid rgba(0, 0, 0, 0.125);
 }
 .list-group-item:first-child {
@@ -4862,7 +4862,7 @@ textarea.form-control-lg {
 .list-group-item.active {
     z-index: 2;
     color: #fff;
-    background-color: #0d6efd;
+    background-color: #ffb7a2;
     border-color: #0d6efd;
 }
 .list-group-item + .list-group-item {
