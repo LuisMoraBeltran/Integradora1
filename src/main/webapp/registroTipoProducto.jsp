@@ -14,12 +14,13 @@
     <body>
         <h3>${mensaje}</h3>
         <form action="ServletTipoProducto" method="post">
-            <label for="Tipo Producto">Tipo de Producto: </label>
+            <label for="TipoProducto">Tipo de Producto: </label>
             <input type="text" id="tipoProducto" class="fadeIn third" name="tipoProducto" placeholder="Playera|Pantalon|Ect...">
             <input type="submit" class="fadeIn fourth" value="Registrar">
         </form>
         <div id="formFooter">
             <a class="underlineHover" href="ServletTipoProducto" title="Lista de Tipos de Productos">Lista Tipos de Productos</a>
         </div>
+
     </body>
 </html>

@@ -125,7 +125,6 @@ public class UsuarioDao {
 
     //Metodo para login usuario
     public Usuario loginUsuario(Usuario user) {
-
         try (Connection con = ConexionMYSQL.getConnection();
                 PreparedStatement stm = con.prepareStatement("SELECT * FROM usuarios WHERE user=? AND pass=?")) {
             stm.setString(1, user.getUser());

@@ -10,7 +10,7 @@
 
 <html>
 <head>
-    <title>Lista de Tallas</title>
+    <title>Lista de Colores</title>
     <link rel="stylesheet" href="static/css/bootstrap.css">
     <link rel="stylesheet" href="static/css/login.css">
 </head>
