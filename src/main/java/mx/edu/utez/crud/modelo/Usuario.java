@@ -83,11 +83,11 @@ public class Usuario {
         this.name = name;
     }
 
-    public Usuario(String user, String pass, String email, String name, String lastname) {
+    public Usuario(String user, String pass,String name,String lastname,String email ) {
         this.user = user;
         this.pass = pass;
-        this.email = email;
         this.name = name;
         this.lastname = lastname;
+        this.email = email;
     }
 }

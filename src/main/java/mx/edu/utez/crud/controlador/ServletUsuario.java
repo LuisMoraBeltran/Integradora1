@@ -49,8 +49,8 @@ public class ServletUsuario extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String pass = request.getParameter("pass");
         String user = request.getParameter("user");
+        String pass = request.getParameter("pass");
         String name = request.getParameter("name");
         String lastname = request.getParameter("lastname");
         String email = request.getParameter("email");

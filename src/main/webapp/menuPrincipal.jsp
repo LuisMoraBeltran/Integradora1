@@ -80,6 +80,14 @@
         <p class="mb-1">Está ingresando al registro de productos y talla</p>
     </a>
 </div>
+<div class="list-group">
+    <a href="listaTiposProductos_Tallas.jsp" class="list-group-item list-group-item-action " aria-current="true">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">°  Registro Tipo Producto-Talla</h5>
+        </div>
+        <p class="mb-1">Esta ingresando a la Lista de Productos y tallas</p>
+    </a>
+</div>
 
 
 <br><br><br>

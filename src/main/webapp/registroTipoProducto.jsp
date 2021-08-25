@@ -21,7 +21,8 @@
         <h3>${mensaje}</h3>
         <h1><i>Registro de tipos de producto</i></h1><br>
         <form action="ServletTipoProducto" method="post">
-            <label for="Tipo Producto"> </label>
+
+            <label for="TipoProducto">Tipo de Producto: </label>
             <input type="text" id="tipoProducto" class="fadeIn third" name="tipoProducto" placeholder="Playera|Pantalon|Ect...">
             <input type="submit" class="fadeIn fourth" value="Registrar">
         </form>

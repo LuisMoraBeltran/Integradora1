@@ -40,7 +40,7 @@ public class UsuarioDao {
         try (
                 Connection con = ConexionMYSQL.getConnection();
                 Statement stm = con.createStatement();
-                ResultSet rs = stm.executeQuery("SELECT * FROM usuarios");) {
+                ResultSet rs = stm.executeQuery("SELECT * FROM usuarios")) {
             while (rs.next()) {
                 Usuario user = new Usuario();
                 user.setId(rs.getInt("idusuarios"));
@@ -63,9 +63,9 @@ public class UsuarioDao {
     public Usuario consultarID(int id) {
         Usuario user = new Usuario();
         try (Connection con = ConexionMYSQL.getConnection();
-                PreparedStatement stm = con.prepareStatement("SELECT * FROM usuarios WHERE idusuarios=?");) {
+                PreparedStatement stm = con.prepareStatement("SELECT * FROM usuarios WHERE idusuarios=?")) {
             stm.setInt(1, id);
-            try (ResultSet rs = stm.executeQuery();) {
+            try (ResultSet rs = stm.executeQuery()) {
                 while (rs.next()) {
                     user.setId(rs.getInt("idusuarios"));
                     user.setUser(rs.getString("user"));
@@ -125,12 +125,11 @@ public class UsuarioDao {
 
     //Metodo para login usuario
     public Usuario loginUsuario(Usuario user) {
-
         try (Connection con = ConexionMYSQL.getConnection();
-                PreparedStatement stm = con.prepareStatement("SELECT * FROM usuarios WHERE user=? AND pass=?");) {
+                PreparedStatement stm = con.prepareStatement("SELECT * FROM usuarios WHERE user=? AND pass=?")) {
             stm.setString(1, user.getUser());
             stm.setString(2, user.getPass());
-            try (ResultSet rs = stm.executeQuery();) {
+            try (ResultSet rs = stm.executeQuery()) {
                 while (rs.next()) {
                     user.setId(rs.getInt("idusuarios"));
                     return user;
@@ -148,9 +147,9 @@ public class UsuarioDao {
     public boolean existeUsuario(String user) {
         boolean status = false;
         try (Connection con = ConexionMYSQL.getConnection();
-                PreparedStatement stm = con.prepareStatement("SELECT * FROM usuarios WHERE user=?");) {
+                PreparedStatement stm = con.prepareStatement("SELECT * FROM usuarios WHERE user=?")) {
             stm.setString(1, user);
-            try (ResultSet rs = stm.executeQuery();) {
+            try (ResultSet rs = stm.executeQuery()) {
                 while (rs.next()) {
                     status = true;
                 }
