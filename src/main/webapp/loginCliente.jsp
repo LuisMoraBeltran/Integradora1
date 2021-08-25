@@ -9,10 +9,12 @@
 <html>
 <head>
     <title>Login Cliente</title>
+    <link rel="icon" type="image/jpg" href="imagen/logo.jpg">
     <link rel="stylesheet" href="static/css/bootstrap.css">
     <link rel="stylesheet" href="static/css/login.css">
+    <link rel="stylesheeth" href="static/css/fondo.css">
 </head>
-<body>
+<body id="fondo">
 
 <div class="wrapper fadeInDown">
     <div id="formContent">
