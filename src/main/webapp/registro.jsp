@@ -27,7 +27,7 @@
                         <input type="text" id="usuario" class="fadeIn second" name="user" placeholder="Usuario">
                     </label>
                     <label for="Password">
-                        <input type="password" id="password" class="fadeIn third" name="pass" placeholder="Password">
+                        <input type="password" id="password" class="fadeIn third" name="pass" placeholder="Contraseña">
                     </label>
                     <label for="Email">
                         <input type="email" id="email" class="fadeIn third" name="email" placeholder="Correo">

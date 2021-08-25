@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="static/css/login.css">
 </head>
 <body id="fondo">
-<h1 id="fondo2">Menú principal</h1>
+<h1 id="fondo2">Menú principal</h1><br><br>
 <div class="list-group" >
     <a href="registro.jsp" class="list-group-item list-group-item-action " aria-current="true">
         <div class="d-flex w-100 justify-content-between">

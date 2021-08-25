@@ -81,7 +81,7 @@ public class ServletCliente extends HttpServlet {
                     logger.info("El cliente ha sido registrado");
                     request.setAttribute("mensaje", "Tus datos han sido registrados");
 
-                    request.getRequestDispatcher("menuPrincipal.jsp").forward(request, response);
+                    request.getRequestDispatcher("pantallaInicio.jsp").forward(request, response);
                 } else {
                     logger.error("Error al registrar datos");
                     request.setAttribute("mensaje", "Error al registrar!");
