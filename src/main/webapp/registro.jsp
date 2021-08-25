@@ -5,14 +5,16 @@
 <html>
     <head>
         <title>Registro</title>
+        <link rel="icon" type="image/jpg" href="imagen/logo.jpg">
         <link rel="stylesheet" href="static/css/bootstrap.css">
         <link rel="stylesheet" href="static/css/login.css">
+        <link rel="stylesheet"  href="static/css/fondo.css">
     </head>
-    <body>
+    <body id="fondo">
         <div class="wrapper fadeInDown">
-            <div id="formContent1">
+            <div id="formContent">
                 <h1><i>Inicio de sesión</i></h1>
-                <h2>Ingresa datos para el registro</h2>
+                <h2 id="texto">Ingresa datos para el registro</h2>
                 <form action="ServletUsuario" method="post">
 
                     <label for="Name">
@@ -31,11 +33,10 @@
                         <input type="email" id="email" class="fadeIn third" name="email" placeholder="Correo">
                     </label><br>
                     <input type="submit" class="fadeIn fourth" value="Registrar" >
+                    <div id="formFooter">
+                        <a class="underlineHover" href="login.jsp" title="Salir">Salir</a>
+                    </div>
                 </form>
-                <h3>${mensaje}</h3>
-            </div>
-            <div id="formFooter">
-                <a class="underlineHover" href="login.jsp" title="Salir">Salir</a>
             </div>
         </div>
         <script src="static/js/bootstrap.js"></script>

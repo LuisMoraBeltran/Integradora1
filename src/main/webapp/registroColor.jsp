@@ -10,16 +10,27 @@
 <html>
     <head>
         <title>Registro Colores</title>
+        <link rel="icon" type="image/jpg" href="imagen/logo.jpg">
+        <link rel="stylesheet" href="static/css/bootstrap.css">
+        <link rel="stylesheet" href="static/css/login.css">
+        <link rel="stylesheet" type="text/css" href="static/css/fondo.css">
     </head>
-    <body>
+    <body id="fondo">
+    <div class="wrapper fadeInDown">
+    <div id="formContent">
         <h3>${mensaje}</h3>
-        <form action="ServletColor" method="post">
-            <label for="Nombre Color">Color: </label>
+        <h1><i>Registro color</i></h1><br>
+        <form action="ServletColor" method="post" >
+            <label for="Nombre Color" > </label>
             <input type="text" id="color" class="fadeIn third" name="color" placeholder="Nombre del Color">
             <input type="submit" class="fadeIn fourth" value="Registrar">
         </form>
         <div id="formFooter">
             <a class="underlineHover" href="ServletColor" title="Lista Colores">Lista Colores</a>
         </div>
+        <div id="formFooter">
+            <a class="underlineHover" href="menuPrincipal.jsp" title="Menu Principal">Atras</a>
+        </div>
+    </div></div>
     </body>
 </html>

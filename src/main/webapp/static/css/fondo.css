@@ -5,11 +5,11 @@
     height: 350px;
 }
 #fondo{
-    background: #E9ECECFF;
+    background: #ac545b;
 }
 #fondo2{
-    color: white;
-    background:#001050;
+    color: #5b2b3d;
+    background:#ffb7a2;
     height: 10%;
 }
 #promo{
@@ -23,13 +23,19 @@
     width: 80%;
     padding:10px 10px 10px 10px;
 }
-#pie{
-    color: white;
-    background-color: #001050;
-    height: 30px;
-    padding: 0 2px 2px 2px;
+#texto{ color: #5b2b3d;
 }
-#texto{ color: white;
+.placeholder{
+    width: 90%;
+}
+#im{
+    width: 15%;
+    height: 30%;
+    border-radius: 100px 100px 100px 100px;}
+.list-group{
+    background:#ffb7a2 ;
+
+
 }
 
 

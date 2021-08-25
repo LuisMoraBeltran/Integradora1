@@ -18,8 +18,9 @@
 <html>
 <head>
     <title>Registro de Producto</title>
+    <link rel="icon" type="image/jpg" href="imagen/logo.jpg">
 </head>
-<body>
+<body id="fondo">
 
 <%
     List<Color> listaColores = new ColorDao().consultarColores();

@@ -159,16 +159,11 @@ input[type=number]:focus,input[type=telf]:focus {
     background-color: #fff;
     border-bottom: 2px solid #5fbae9;
 }
-
 input[type=text]::placeholder , input[type=password]::placeholder,
 input[type=email]::placeholder, input[type=number]::placeholder, input[type=telf]::placeholder{
     color: #cccccc;
 }
-
-
-
 /* ANIMATIONS */
-
 /* Simple CSS3 Fade-in-down Animation */
 .fadeInDown {
     -webkit-animation-name: fadeInDown;
@@ -178,7 +173,6 @@ input[type=email]::placeholder, input[type=number]::placeholder, input[type=telf
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }
-
 @-webkit-keyframes fadeInDown {
     0% {
         opacity: 0;
@@ -191,7 +185,6 @@ input[type=email]::placeholder, input[type=number]::placeholder, input[type=telf
         transform: none;
     }
 }
-
 @keyframes fadeInDown {
     0% {
         opacity: 0;
@@ -204,12 +197,10 @@ input[type=email]::placeholder, input[type=number]::placeholder, input[type=telf
         transform: none;
     }
 }
-
 /* Simple CSS3 Fade-in Animation */
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-
 .fadeIn {
     opacity:0;
     -webkit-animation:fadeIn ease-in 1;
@@ -224,31 +215,26 @@ input[type=email]::placeholder, input[type=number]::placeholder, input[type=telf
     -moz-animation-duration:1s;
     animation-duration:1s;
 }
-
 .fadeIn.first {
     -webkit-animation-delay: 0.4s;
     -moz-animation-delay: 0.4s;
     animation-delay: 0.4s;
 }
-
 .fadeIn.second {
     -webkit-animation-delay: 0.6s;
     -moz-animation-delay: 0.6s;
     animation-delay: 0.6s;
 }
-
 .fadeIn.third {
     -webkit-animation-delay: 0.8s;
     -moz-animation-delay: 0.8s;
     animation-delay: 0.8s;
 }
-
 .fadeIn.fourth {
     -webkit-animation-delay: 1s;
     -moz-animation-delay: 1s;
     animation-delay: 1s;
 }
-
 /* Simple CSS3 Fade-in Animation */
 .underlineHover:after {
     display: block;
@@ -260,23 +246,16 @@ input[type=email]::placeholder, input[type=number]::placeholder, input[type=telf
     content: "";
     transition: width 0.2s;
 }
-
 .underlineHover:hover {
     color: #0d0d0d;
 }
-
 .underlineHover:hover:after{
     width: 100%;
 }
-
-
-
 /* OTHERS */
-
 *:focus {
     outline: none;
 }
-
 #icon {
     width:60%;
 }
