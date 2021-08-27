@@ -56,7 +56,7 @@ public class ServletLogin  extends HttpServlet {
         }
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //Metodos para el cerrar una sesion y destruir la sesion
+        //Metodos para cerrar una sesion y destruir la sesion
 
         String mensaje="";
         RequestDispatcher dispatcher= null;

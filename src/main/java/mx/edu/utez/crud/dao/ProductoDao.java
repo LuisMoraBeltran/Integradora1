@@ -1,11 +1,9 @@
 package mx.edu.utez.crud.dao;
 
 import mx.edu.utez.crud.modelo.Producto;
-import mx.edu.utez.crud.modelo.TipoProducto;
 import mx.edu.utez.crud.util.ConexionMYSQL;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -44,9 +42,9 @@ public class ProductoDao {
     public Producto consultarProductoID(int id) {
         Producto producto = new Producto();
         try (Connection con = ConexionMYSQL.getConnection();
-             PreparedStatement stm = con.prepareStatement("SELECT * FROM producto WHERE id_producto=?");) {
+             PreparedStatement stm = con.prepareStatement("SELECT * FROM producto WHERE id_producto=?")) {
             stm.setInt(1, id);
-            try (ResultSet rs = stm.executeQuery();) {
+            try (ResultSet rs = stm.executeQuery()) {
                 while (rs.next()) {
                     producto.setId(rs.getInt("id_producto"));
                     producto.setNameProduct(rs.getString("nombre"));
@@ -97,7 +95,7 @@ public class ProductoDao {
         try (
                 Connection con = ConexionMYSQL.getConnection();
                 Statement stm = con.createStatement();
-                ResultSet rs = stm.executeQuery("SELECT * FROM producto WHERE id_producto");) {
+                ResultSet rs = stm.executeQuery("SELECT * FROM producto WHERE id_producto")) {
             while (rs.next()) {
                 Producto producto = new Producto();
                 producto.setId(rs.getInt("id_producto"));
@@ -123,7 +121,7 @@ public class ProductoDao {
         try (
                 Connection con = ConexionMYSQL.getConnection();
                 Statement stm = con.createStatement();
-                ResultSet rs = stm.executeQuery("SELECT * FROM producto WHERE cliente_id_cliente" + idCliente);) {
+                ResultSet rs = stm.executeQuery("SELECT * FROM producto WHERE cliente_id_cliente" + idCliente)) {
             while (rs.next()) {
                 Producto producto = new Producto();
                 producto.setId(rs.getInt("id_producto"));
@@ -161,4 +159,38 @@ public class ProductoDao {
 
         return status;
     }
+    //Método para guardar Producto_Talla
+    public boolean guardarRelacionProductoTalla(int idProducto,int idTalla) {
+        try (Connection con = ConexionMYSQL.getConnection()) {
+            try (PreparedStatement pstm = con.prepareStatement("insert into producto_has_talla (producto_id_producto, talla_id_talla) values(?,?)")) {
+                pstm.setInt(1,idProducto );
+                pstm.setInt(2, idTalla);
+
+                return pstm.executeUpdate() == 1;
+            } catch (Exception e) {
+                logger.error(e.getMessage());
+            }
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+        }
+        return false;
+    }
+    //Método para guardar Producto_Color
+    public boolean guardarRelacionProductoColor(int idProducto, int idColor) {
+        try (Connection con = ConexionMYSQL.getConnection()) {
+            try (PreparedStatement pstm = con.prepareStatement("insert into color_has_producto(color_id_color, producto_id_producto) values(?,?)")) {
+                pstm.setInt(1, idProducto);
+                pstm.setInt(2, idColor);
+
+                return pstm.executeUpdate() == 1;
+            } catch (Exception e) {
+                logger.error(e.getMessage());
+            }
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+        }
+        return false;
+    }
+
+
 }

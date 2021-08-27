@@ -8,6 +8,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import javax.servlet.annotation.WebServlet;
+
+import mx.edu.utez.crud.modelo.Talla;
 import mx.edu.utez.crud.modelo.TallaTipoProducto;
 import mx.edu.utez.crud.modelo.TipoProducto;
 import mx.edu.utez.crud.util.ConexionMYSQL;
@@ -69,5 +71,24 @@ public class TallaTipoProductoDao {
         }
 
         return status;
+    }
+
+    public List<Talla> consultaProductoTalla(int idTipoProducto) {
+        List<Talla> listaRelacion = new ArrayList<>();
+        try (
+                Connection con = ConexionMYSQL.getConnection();
+                Statement stm = con.createStatement();
+                ResultSet rs = stm.executeQuery("SELECT id_talla, talla "
+                        + "FROM talla_has_tipoProducto "
+                        + "INNER JOIN talla ON id_talla = talla_id_talla "
+                        + "WHERE tipoProducto_id_tipoProducto =" + idTipoProducto);) {
+            while (rs.next()) {
+                Talla talla = new Talla(rs.getInt("id_talla"), rs.getString("talla"));
+                listaRelacion.add(talla);
+            }
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+        }
+        return listaRelacion;
     }
 }

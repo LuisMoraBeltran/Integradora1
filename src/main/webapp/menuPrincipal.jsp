@@ -5,7 +5,7 @@
   Time: 08:09 p. m.
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="" %>
 <html>
 <head>
     <title>Perfil del Administrador</title>
@@ -81,11 +81,9 @@
     </a>
 </div>
 
-
-
 <br><br><br>
 <div id="formFooter">
-    <a class="underlineHover" href="pantallaInicio.jsp">Atras</a>
+    <a class="underlineHover" href="pantallaInicio.jsp">Cerrar Sesión</a>
 </div>
 
 

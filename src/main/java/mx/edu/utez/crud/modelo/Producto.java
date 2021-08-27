@@ -9,6 +9,8 @@ public class Producto {
     private String marc;
     private int clienteId;
 
+
+
     public int getClienteId() {
         return clienteId;
     }
@@ -18,6 +20,11 @@ public class Producto {
     }
 
     public Producto(){
+
+    }
+    public Producto(String nameProduct, Integer id) {
+        this.nameProduct = nameProduct;
+        this.id = id;
 
     }
 

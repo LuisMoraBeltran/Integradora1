@@ -38,6 +38,7 @@ public class ServletTalla extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name = request.getParameter("talla");
         TallaDao tallaDao = new TallaDao();
+
         if (!tallaDao.existeTalla(name)) {
             HttpSession sesionLogin = request.getSession();
             Talla talla = new Talla(name, (Integer) sesionLogin.getAttribute("id"));

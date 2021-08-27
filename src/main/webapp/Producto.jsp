@@ -4,7 +4,8 @@
 <%@ page import="mx.edu.utez.crud.dao.ColorDao" %>
 <%@ page import="mx.edu.utez.crud.modelo.Color" %>
 <%@ page import="java.util.List" %>
-<%@ page import="mx.edu.utez.crud.dao.TallaDao" %><%--
+<%@ page import="mx.edu.utez.crud.dao.TallaDao" %>
+<%@ page import="mx.edu.utez.crud.dao.TallaTipoProductoDao" %><%--
   Created by IntelliJ IDEA.
   User: Usuario
   Date: 23/08/2021
@@ -24,7 +25,8 @@
 
 <%
     List<Color> listaColores = new ColorDao().consultarColores();
-    List<Talla> listaTallas = new TallaDao().consultarTallas();
+
+    List<TipoProducto> listaTipoProductos = new TipoProductoDao().consultarTiposDeProductos();
 %>
 
     <label for="product">Nombre del producto:</label>
@@ -42,26 +44,33 @@
     <label for="cost">Costo:</label>
     <input type="text" id="cost" class="fadeIn third" name="cost" placeholder="Costo producto"><br>
 
-    <label>Colores:</label>
+    <label id="texto">Tipo de Producto:</label>
     <label>
-        <select name="color">
-            <option>Selecciona un color</option>
-            <% for (Color colorproducto : listaColores) {%>
-            <option value="<%=colorproducto.getId() %>"><%=colorproducto.getName() %></option>
+        <select name="tipoProducto">
+            <option>Seleccione Tipo de producto</option>
+            <% for (TipoProducto tipoProducto : listaTipoProductos) {%>
+            <option value="<%=tipoProducto.getId() %>"><%=tipoProducto.getName() %></option>
             <%}%>
         </select>
     </label>
 
-    <label>Talla: </label>
-    <label>
-        <select name="tallaProducto">
-            <option>Seleccione Talla</option>
-            <% for (Talla talla : listaTallas) {%>
-            <option value="<%=talla.getId() %>" ><%=talla.getName() %></option>
-        <%}%>
-        </select>
-    </label>
+<%--<label>Talla: </label>
+<label>
+        <option>Seleccione Talla</option>
+        <%
+            List<Talla> listaTallas = new TallaTipoProductoDao();
+            for (Talla talla: listaTallas) {%>
+       <input type="checkbox" name="talla" value="<%=talla.getId() %>"> <%=talla.getName() %> <BR>
+    <%}%>
+</label>--%>
 
-    <input type="submit" class="fadeIn fourth" value="Publicar">
+<label>Colores:</label>
+<label>
+        <% for (Color colorproducto : listaColores) {%>
+    <input type="checkbox" name="colores" value="<%=colorproducto.getId() %>"> <%=colorproducto.getName() %> <BR>
+        <%}%>
+</label>
+
+<input type="submit" class="fadeIn fourth" value="Publicar">
 </body>
 </html>

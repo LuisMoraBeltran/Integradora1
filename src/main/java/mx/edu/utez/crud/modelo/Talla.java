@@ -23,6 +23,11 @@ public class Talla {
         this.idUsuario = idUsuario;
     }
 
+    public Talla(int id, String name) {
+        this.id= id;
+        this.name= name;
+    }
+
     public int getIdUsuario() {
         return idUsuario;
     }
