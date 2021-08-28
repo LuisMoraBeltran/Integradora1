@@ -33,16 +33,16 @@ public class ClienteDao {
     }
 
     //Metodo para login usuario
-    public Cliente loginCliente(Cliente correo) {
+    public Cliente loginCliente(Cliente cliente) {
 
         try (Connection con = ConexionMYSQL.getConnection();
              PreparedStatement stm = con.prepareStatement("SELECT * FROM cliente WHERE correo=? AND pass=?")) {
-            stm.setString(1, correo.getCorreo());
-            stm.setString(2, correo.getPass());
+            stm.setString(1, cliente.getCorreo());
+            stm.setString(2, cliente.getPass());
             try (ResultSet rs = stm.executeQuery()) {
                 while (rs.next()) {
-                    correo.setId(rs.getInt("idclientes"));
-                    return correo;
+                    cliente.setId(rs.getInt("idclientes"));
+                    return cliente;
                 }
             } catch (Exception e) {
                 logger.error(e.getMessage());

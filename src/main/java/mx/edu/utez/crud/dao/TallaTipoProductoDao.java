@@ -18,6 +18,7 @@ import org.slf4j.LoggerFactory;
 
 @WebServlet(name = "ServletTallaTipoProducto", value = "/ServletTallaTipoProducto")
 public class TallaTipoProductoDao {
+
     Logger logger = LoggerFactory.getLogger(TallaDao.class);
 
     public boolean guardarRelacionTallaTipoProducto(int idTalla, int idTipoProducto) {
@@ -35,7 +36,7 @@ public class TallaTipoProductoDao {
         }
         return false;
     }
-    
+
     public List<TallaTipoProducto> consultaTodasLasRelaciones() {
         List<TallaTipoProducto> listaRelacion = new ArrayList<>();
         try (
@@ -54,7 +55,7 @@ public class TallaTipoProductoDao {
         }
         return listaRelacion;
     }
-    
+
     public boolean eliminarRelacion(int idTalla, int idTipoProducto) {
         boolean status = false;
         try {
@@ -73,15 +74,15 @@ public class TallaTipoProductoDao {
         return status;
     }
 
-    public List<Talla> consultaProductoTalla(int idTipoProducto) {
+    public List<Talla> consultaTallasPorTipoProducto(int idTipoProducto) {
         List<Talla> listaRelacion = new ArrayList<>();
         try (
                 Connection con = ConexionMYSQL.getConnection();
                 Statement stm = con.createStatement();
                 ResultSet rs = stm.executeQuery("SELECT id_talla, talla "
-                        + "FROM talla_has_tipoProducto "
-                        + "INNER JOIN talla ON id_talla = talla_id_talla "
-                        + "WHERE tipoProducto_id_tipoProducto =" + idTipoProducto);) {
+                        + "FROM talla "
+                        + "LEFT JOIN talla_has_tipoProducto ON id_talla = talla_id_talla "
+                        + "WHERE tipoProducto_idtipoProducto = " + idTipoProducto);) {
             while (rs.next()) {
                 Talla talla = new Talla(rs.getInt("id_talla"), rs.getString("talla"));
                 listaRelacion.add(talla);

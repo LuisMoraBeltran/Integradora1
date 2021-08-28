@@ -1,9 +1,3 @@
-<%@page import="mx.edu.utez.crud.dao.TallaDao"%>
-<%@page import="mx.edu.utez.crud.modelo.Talla"%>
-<%@page import="mx.edu.utez.crud.dao.TipoProductoDao"%>
-<%@page import="mx.edu.utez.crud.modelo.TipoProducto"%>
-<%@page import="java.util.List"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Usuario
@@ -12,6 +6,11 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8"%>
+<%@page import="mx.edu.utez.crud.modelo.Talla"%>
+<%@page import="mx.edu.utez.crud.modelo.TipoProducto"%>
+<%@page import="java.util.List"%>
+<jsp:useBean id="tpDao" class="mx.edu.utez.crud.dao.TipoProductoDao" scope="page"></jsp:useBean>
+<jsp:useBean id="tDao" class="mx.edu.utez.crud.dao.TallaDao" scope="page"></jsp:useBean>
 <html>
     <head>
         <title>Registro Tallas Productos</title>
@@ -26,16 +25,11 @@
         <h1>${mensaje}</h1>
             <h1><i id="texto">Tipo y Talla</i></h1><br>
         <form action="ServletTallaTipoProducto" method="post">
-
-            <%
-                    List<TipoProducto> listaTipoProductos = new TipoProductoDao().consultarTiposDeProductos();
-                    List<Talla> listaTallas = new TallaDao().consultarTallas();
-            %>
             <label id="texto">Tipo de Producto:</label>
             <label>
                 <select name="tipoProducto">
                     <option>Seleccione Tipo de producto</option>
-                    <% for (TipoProducto tipoProducto : listaTipoProductos) {%>
+                    <% for (TipoProducto tipoProducto : tpDao.consultarTiposDeProductos()) {%>
                     <option value="<%=tipoProducto.getId() %>"><%=tipoProducto.getName() %></option>
                     <%}%>
                 </select>
@@ -45,7 +39,7 @@
             <label>
                 <select name="tallaProducto">
                     <option>Seleccione Talla</option>
-                    <% for (Talla talla : listaTallas) {%>
+                    <% for (Talla talla : tDao.consultarTallas()) {%>
                     <option value="<%=talla.getId() %>" ><%=talla.getName() %></option>
                     <%}%>
                 </select>

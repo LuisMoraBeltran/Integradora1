@@ -12,6 +12,7 @@ import java.io.IOException;
 
 @WebServlet(name = "ServletProducto", value = "/ServletProducto")
 public class ServletProducto extends HttpServlet {
+
     Logger logger = LoggerFactory.getLogger(ServletProducto.class);
 
     @Override
@@ -34,50 +35,55 @@ public class ServletProducto extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String name = request.getParameter("product");
         ProductoDao productoDao = new ProductoDao();
+        HttpSession sesionLogin = request.getSession();
+        Producto producto = new Producto(
+                request.getParameter("product"),
+                request.getParameter("descript"),
+                Integer.parseInt(request.getParameter("unid")),
+                Float.parseFloat(request.getParameter("cost")),
+                request.getParameter("marc"),
+                (Integer) sesionLogin.getAttribute("idCliente")
+        );
 
-            HttpSession sesionLogin = request.getSession();
-            Producto producto = new Producto(name, (Integer) sesionLogin.getAttribute("id"));//((Integer) sesionLogin.getAttribute("id"));
-            int idProducto = productoDao.guardarProducto(producto);
-            if (idProducto != 0) {
-
-                //Agregar el registro de la relación talla producto
-                int idTalla = Integer.parseInt(request.getParameter("idProductoTalla"));
-                ProductoDao pdt = new ProductoDao();
-                if (pdt.guardarRelacionProductoTalla(idProducto, idTalla)) {
-                    logger.info("Relacion entre producto y talla");
-                    request.setAttribute("mensaje", "Relacion entre producto y talla");
-                    request.getRequestDispatcher("producto.jsp").forward(request, response);
+        int idProducto = productoDao.guardarProducto(producto);
+        if (idProducto != 0) {
+            //Agregar el registro de la relacion de color producto
+            String colores[] = request.getParameterValues("colores");
+            for (String idColor : colores) {
+                if (productoDao.guardarRelacionProductoColores(idProducto, Integer.parseInt(idColor))) {
+                    logger.info("Relacion entre producto y colores registrada");
+                    //QUITE EL DISPACHER POR QUE ESTAS EN UN CICLO Y SI MANDAS EL DISPACHER VAS A ROMPER EL CICLO Y NO VAS NI A TERMINAR DE GUARDAR TODO
                 } else {
-                    logger.error("Error al registrar relacion producto y talla");
-                    request.setAttribute("mensaje", "Error al registrar relacion producto y talla");
-                    request.getRequestDispatcher("Producto.jsp").forward(request, response);
+                    logger.error("Error al registrar relacion entre producto y color");
+                    //AQUI DEBERIAS MANDARLO A EDITAR EL PRODUCTO, YA QUE SI PUDISTE GUARDAR EL PRODUCTO PERO NO LA RELACION.
+                    //LA OTRA OPCION ES QUE ELIMENS EL PRODUCTO Y ENTONCES SI LO REDIRIJAS AL FORMULARIO DE REGISTRO PRODUCTO DE NUEVO
+                    //PIENSA COMO VAS A TRATAR ESTO POR QUE ESTARIAS INTERRUMPIENDO TODO TE COMENTO EL DISPACHERT
+                    //request.getRequestDispatcher("registroProduct.jsp").forward(request, response);
                 }
-                //Agregar el registro de la relacion de color producto
-                String colores[] = request.getParameterValues("colores");
-                //String select[] = request.getParameterValues("id");
-                ProductoDao pdc = new ProductoDao();
-                for (String color:colores) {
-
-                    if (pdc.guardarRelacionProductoColor(idProducto,Integer.parseInt(color))) {
-                        logger.info("Relacion entre producto y color registrada");
-                        request.setAttribute("mensaje", "Relacion entre producto y color registrada");
-                        request.getRequestDispatcher("Producto").forward(request, response);
-                    } else {
-                        logger.error("Error al registrar relacion entre producto y color");
-                        request.setAttribute("mensaje", "Error al registrar relacion entre producto y color");
-                        request.getRequestDispatcher("Producto.jsp").forward(request, response);
-                    }
-
-                }
-                //
-                logger.info("EL producto ha sido registrado");
-                request.setAttribute("mensaje", "Producto registrado");
-            } else {
-                logger.error("Error al registrar talla");
-                request.setAttribute("mensaje", "Error al registrar!");
             }
-        request.getRequestDispatcher("Producto.jsp").forward(request, response);
+            
+            
+            //Agregar el registro de la relación talla producto
+            String tallas[] = request.getParameterValues("tallas");
+            for (String idTalla : tallas) {
+                if (productoDao.guardarRelacionProductoTallas(idProducto, Integer.parseInt(idTalla))) {
+                    logger.info("Relacion entre producto y tallas registrada");
+                    //QUITE EL DISPACHER POR QUE ESTAS EN UN CICLO Y SI MANDAS EL DISPACHER VAS A ROMPER EL CICLO Y NO VAS NI A TERMINAR DE GUARDAR TODO
+                } else {
+                    logger.error("Error al registrar relacion entre producto y tallas");
+                    //AQUI DEBERIAS MANDARLO A EDITAR EL PRODUCTO, YA QUE SI PUDISTE GUARDAR EL PRODUCTO PERO NO LA RELACION.
+                    //LA OTRA OPCION ES QUE ELIMENS EL PRODUCTO Y ENTONCES SI LO REDIRIJAS AL FORMULARIO DE REGISTRO PRODUCTO DE NUEVO
+                    //PIENSA COMO VAS A TRATAR ESTO POR QUE ESTARIAS INTERRUMPIENDO TODO TE COMENTO EL DISPACHERT
+                    //request.getRequestDispatcher("registroProduct.jsp").forward(request, response);
+                }
+            }
+            logger.info("EL producto ha sido registrado");
+            request.setAttribute("mensaje", "Producto registrado");
+        } else {
+            logger.error("Error al registrar producto");
+            request.setAttribute("mensaje", "Error al registrar producto");
+        }
+        request.getRequestDispatcher("registroProduct.jsp").forward(request, response);
     }
 }

@@ -14,7 +14,7 @@ public class ProductoDao {
     //Metodo para registrar en la tabla producto
     public int guardarProducto(Producto product) {
         try (Connection con = ConexionMYSQL.getConnection()) {
-            try (PreparedStatement pstm = con.prepareStatement("insert into producto(nombre,descripcion,unidad,costo,marca) values(?,?,?,?,?)")) {
+            try (PreparedStatement pstm = con.prepareStatement("INSERT INTO producto(nombre,descripcion,unidad,costo,marca) VALUES (?,?,?,?,?)")) {
                 pstm.setString(1, product.getNameProduct());
                 pstm.setString(2, product.getDescrip());
                 pstm.setInt(3, product.getUnid());
@@ -160,9 +160,9 @@ public class ProductoDao {
         return status;
     }
     //Método para guardar Producto_Talla
-    public boolean guardarRelacionProductoTalla(int idProducto,int idTalla) {
+    public boolean guardarRelacionProductoTallas(int idProducto,int idTalla) {
         try (Connection con = ConexionMYSQL.getConnection()) {
-            try (PreparedStatement pstm = con.prepareStatement("insert into producto_has_talla (producto_id_producto, talla_id_talla) values(?,?)")) {
+            try (PreparedStatement pstm = con.prepareStatement("INSERT INTO producto_has_talla (producto_id_producto, talla_id_talla) VALUES (?,?)")) {
                 pstm.setInt(1,idProducto );
                 pstm.setInt(2, idTalla);
 
@@ -175,10 +175,10 @@ public class ProductoDao {
         }
         return false;
     }
-    //Método para guardar Producto_Color
-    public boolean guardarRelacionProductoColor(int idProducto, int idColor) {
+    //Método para guardar Producto_Colores
+    public boolean guardarRelacionProductoColores(int idProducto, int idColor) {
         try (Connection con = ConexionMYSQL.getConnection()) {
-            try (PreparedStatement pstm = con.prepareStatement("insert into color_has_producto(color_id_color, producto_id_producto) values(?,?)")) {
+            try (PreparedStatement pstm = con.prepareStatement("INSERT INTO color_has_producto(color_id_color, producto_id_producto) VALUES (?,?)")) {
                 pstm.setInt(1, idProducto);
                 pstm.setInt(2, idColor);
 

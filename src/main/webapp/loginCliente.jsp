@@ -22,7 +22,7 @@
         <!-- Login Form -->
         <form action="ServletLoginCliente" method="post">
             <h1><i>Inicio de sesión</i></h1>
-            <label for="email"><input type="email" id="email" class="fadeIn second" name="user" placeholder="Ingresa tu correo"></label>
+            <label for="email"><input type="email" id="email" class="fadeIn second" name="correo" placeholder="Ingresa tu correo"></label>
             <label for="pass"><input type="password" id="pass" class="fadeIn third" name="pass" placeholder="Ingresa tu contraseña"></label>
             <input type="hidden" value="inicioSesion" name="accion">
             <input type="submit" class="fadeIn fourth" value="Log In">

@@ -18,19 +18,19 @@
                 <form action="ServletUsuario" method="post">
 
                     <label for="Name">
-                        <input type="text" id="name" class="fadeIn third" name="name" placeholder="Nombre">
+                        <input type="text" id="name" class="fadeIn third" name="name" placeholder="Nombre" required="required" pattern="^[A-Za-z]+\s?[A-Za-z]+$">
                     </label>
                     <label for="Lastname">
-                        <input type="text" id="lastname" class="fadeIn third" name="lastname" placeholder="Apellido">
+                        <input type="text" id="lastname" class="fadeIn third" name="lastname" placeholder="Apellido" required="required">
                     </label>
                     <label for="Usuario">
-                        <input type="text" id="usuario" class="fadeIn second" name="user" placeholder="Usuario">
+                        <input type="text" id="usuario" class="fadeIn second" name="user" placeholder="Usuario" required="required">
                     </label>
                     <label for="Password">
-                        <input type="password" id="password" class="fadeIn third" name="pass" placeholder="Contraseña">
+                        <input type="password" id="password" class="fadeIn third" name="pass" placeholder="Contraseña" required="required">
                     </label>
                     <label for="Email">
-                        <input type="email" id="email" class="fadeIn third" name="email" placeholder="Correo">
+                        <input type="email" id="email" class="fadeIn third" name="email" placeholder="Correo" required="required">
                     </label><br>
                     <input type="submit" class="fadeIn fourth" value="Registrar" >
                     <div id="formFooter">

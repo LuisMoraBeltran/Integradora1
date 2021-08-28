@@ -73,7 +73,7 @@
         <a class="nav-link" href="pantallaInicio.jsp"id="texto">Verano</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="formCliente.jsp"id="texto">Iniciar sesión</a>
+        <a class="nav-link" href="loginCliente.jsp"id="texto">Iniciar sesión</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="login.jsp">  </a>

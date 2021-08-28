@@ -15,6 +15,25 @@ public class ServletLoginCliente extends HttpServlet {
     Logger logger= LoggerFactory.getLogger(ServletLoginCliente.class);
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //Metodos para el cerrar una sesion y destruir la sesion
+        String mensaje="";
+        RequestDispatcher dispatcher=null;
+        HttpSession sessionLogin;
+
+        sessionLogin=request.getSession(false);
+        mensaje="Gracias por utilizar el sistema, Bye!";
+        sessionLogin.removeAttribute("correo");
+        sessionLogin.removeAttribute("pass");
+        sessionLogin.removeAttribute("idCliente");
+        sessionLogin.invalidate();
+        dispatcher=request.getRequestDispatcher("loginCliente.jsp");
+        request.setAttribute("mensaje",mensaje);
+        dispatcher.forward(request,response);
+        
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String correo = request.getParameter("correo");
         String pass = request.getParameter("pass");
 
@@ -41,30 +60,12 @@ public class ServletLoginCliente extends HttpServlet {
                 } else {
                     logger.error("Error al logear");
                     request.setAttribute("mensaje", "Datos incorrectos, verifica tu correo y/o contraseña.");
-                    request.getRequestDispatcher("loginCliente.jsp.jsp").forward(request, response);
+                    request.getRequestDispatcher("loginCliente.jsp").forward(request, response);
                 }
                 break;
             case "cerrarSesion":
             default:
                 break;
         }
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //Metodos para el cerrar una sesion y destruir la sesion
-        String mensaje="";
-        RequestDispatcher dispatcher=null;
-        HttpSession sessionLogin;
-
-        sessionLogin=request.getSession(false);
-        mensaje="Gracias por utilizar el sistema, Bye!";
-        sessionLogin.removeAttribute("correo");
-        sessionLogin.removeAttribute("pass");
-        sessionLogin.removeAttribute("idCliente");
-        sessionLogin.invalidate();
-        dispatcher=request.getRequestDispatcher("loginCliente.jsp");
-        request.setAttribute("mensaje",mensaje);
-        dispatcher.forward(request,response);
     }
 }

@@ -1,6 +1,7 @@
 package mx.edu.utez.crud.modelo;
 
 public class Producto {
+
     private int id;
     private String nameProduct;
     private String descrip;
@@ -9,32 +10,25 @@ public class Producto {
     private String marc;
     private int clienteId;
 
-
-
-    public int getClienteId() {
-        return clienteId;
+    public Producto() {
     }
 
-    public void setClienteId(int clienteId) {
-        this.clienteId = clienteId;
-    }
-
-    public Producto(){
-
-    }
-    public Producto(String nameProduct, Integer id) {
-        this.nameProduct = nameProduct;
-        this.id = id;
-
-    }
-
-    public Producto(int id, String nameProduct, String descrip, int unid, float cost, String marc) {
+    public Producto(int id, String nameProduct, String descrip, int unid, float cost, String marc, int clienteId) {
         this.id = id;
         this.nameProduct = nameProduct;
         this.descrip = descrip;
         this.unid = unid;
         this.cost = cost;
         this.marc = marc;
+    }
+
+    public Producto(String nameProduct, String descrip, int unid, float cost, String marc, int clienteId) {
+        this.nameProduct = nameProduct;
+        this.descrip = descrip;
+        this.unid = unid;
+        this.cost = cost;
+        this.marc = marc;
+        this.clienteId = clienteId;
     }
 
     public int getId() {
@@ -85,6 +79,12 @@ public class Producto {
         this.marc = marc;
     }
 
+    public int getClienteId() {
+        return clienteId;
+    }
 
+    public void setClienteId(int clienteId) {
+        this.clienteId = clienteId;
+    }
 
 }

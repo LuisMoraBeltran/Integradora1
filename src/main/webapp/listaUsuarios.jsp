@@ -23,7 +23,6 @@
             <tr>
                 <th>No.</th>
                 <th>Usuario</th>
-                <th>Contraseña</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Email</th>
@@ -34,7 +33,6 @@
                 <tr>
                     <td>${status.count}</td>
                     <td>${user.user}</td>
-                    <td>${user.pass}</td>
                     <td>${user.name}</td>
                     <td>${user.lastname}</td>
                     <td>${user.email}</td>
